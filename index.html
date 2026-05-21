@@ -37,10 +37,21 @@
         .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3.2rem; margin: 0; line-height: 1.1; max-width: 900px; }
         .hero p { font-size: 1.4rem; margin-top: 25px; font-weight: 300; border-left: 4px solid var(--blanco); padding-left: 20px; max-width: 700px; }
 
+        /* SECCIÓN NOSOTROS */
+        .nosotros-section { padding: 100px 8%; background: var(--blanco); }
+        .nosotros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .nosotros-content h2 { font-family: 'Montserrat', sans-serif; color: var(--verde-primario); font-size: 2.2rem; margin-bottom: 20px; }
+        .nosotros-content p { line-height: 1.8; color: #555; }
+
+        /* DIFERENCIADORES (POR QUÉ ELEGIRNOS) */
+        .diferenciadores { padding: 80px 8%; background: var(--verde-claro); }
+        .grid-dif { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+        .item-dif h4 { font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin-bottom: 10px; }
+        .item-dif p { font-size: 0.9rem; color: #666; }
+
         /* ÁREAS DE PRÁCTICA */
         .areas-section { padding: 100px 8%; background: var(--blanco); }
         .section-title { text-align: center; font-family: 'Montserrat', sans-serif; margin-bottom: 60px; color: var(--verde-primario); font-size: 2.2rem; letter-spacing: 1px; }
-        
         .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.4s; border: 1px solid #eee; }
         .card:hover { transform: translateY(-10px); }
@@ -49,107 +60,52 @@
         .card-body h3 { font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin: 0 0 10px; font-size: 1.1rem; display: flex; align-items: center; }
         .card-body p { font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0; }
 
-        /* --- NUEVA SECCIÓN EXPERIENCIA --- */
-        .experiencia-seccion {
-            padding: 100px 8%;
-            background-color: #fdfdfd;
-            border-top: 1px solid #eee;
+        /* BANNER SERVICIOS FONDO VERDE */
+        .banner-servicios { 
+            background: var(--verde-primario); 
+            color: white; 
+            padding: 80px 8%; 
+            text-align: center; 
         }
-
-        .contenedor-flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 60px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .bloque-mapa { flex: 1; text-align: center; }
-        .mapa-img { 
-            max-width: 320px; 
-            width: 100%; 
-            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1)); 
-        }
-
-        .tarjeta-experiencia {
-            flex: 1.2;
-            background: #fff;
-            padding: 45px;
-            border-radius: 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-            border: 1px solid #f0f0f0;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 25px;
-            border-bottom: 2px solid #f4f4f4;
-            margin-bottom: 30px;
-        }
-
-        .tab-link {
-            background: none;
-            border: none;
-            padding: 10px 0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: #bbb;
-            cursor: pointer;
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-
-        .tab-link.active {
+        .banner-servicios h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 30px; }
+        .btn-servicios {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
             color: var(--verde-primario);
-            border-bottom: 3px solid var(--verde-primario);
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
+        .btn-servicios:hover { background: var(--verde-claro); transform: scale(1.05); }
 
+        /* EXPERIENCIA */
+        .experiencia-seccion { padding: 100px 8%; background-color: #fdfdfd; border-top: 1px solid #eee; }
+        .contenedor-flex { display: flex; align-items: center; justify-content: center; gap: 60px; max-width: 1100px; margin: 0 auto; }
+        .bloque-mapa { flex: 1; text-align: center; }
+        .mapa-img { max-width: 320px; width: 100%; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1)); }
+        .tarjeta-experiencia { flex: 1.2; background: #fff; padding: 45px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+        .tabs { display: flex; gap: 25px; border-bottom: 2px solid #f4f4f4; margin-bottom: 30px; }
+        .tab-link { background: none; border: none; padding: 10px 0; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700; color: #bbb; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        .tab-link.active { color: var(--verde-primario); border-bottom: 3px solid var(--verde-primario); }
         .tab-contenido { display: none; animation: fadeIn 0.5s; }
         .tab-contenido.active { display: block; }
-
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
         .lista-clientes { list-style: none; padding: 0; margin: 0; }
-        .lista-clientes li {
-            padding: 18px 0;
-            border-bottom: 1px solid #f9f9f9;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .otros-item { color: #888 !important; font-weight: 400 !important; font-size: 0.9rem; border: none !important; }
-
-        .pie-tarjeta {
-            margin-top: 35px;
-            border-top: 1px solid #eee;
-            padding-top: 25px;
-            text-align: center;
-        }
-
-        .pie-tarjeta p {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: var(--verde-primario);
-            font-size: 1rem;
-            margin: 0;
-        }
+        .lista-clientes li { padding: 18px 0; border-bottom: 1px solid #f9f9f9; color: #333; font-weight: 500; }
+        .pie-tarjeta { margin-top: 35px; border-top: 1px solid #eee; padding-top: 25px; text-align: center; }
+        .pie-tarjeta p { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--verde-primario); font-size: 1rem; margin: 0; }
 
         /* FOOTER */
         footer { background: var(--negro-footer); color: var(--blanco); padding: 80px 8% 40px; }
         .footer-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; }
         .google-map { height: 350px; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-
-        .btn-wsp { 
-            position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; 
-            padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; 
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 2000; transition: 0.3s;
-        }
+        .btn-wsp { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 2000; transition: 0.3s; }
 
         @media (max-width: 900px) {
-            .contenedor-flex { flex-direction: column; gap: 40px; }
+            .nosotros-grid, .contenedor-flex { grid-template-columns: 1fr; flex-direction: column; }
             .hero h1 { font-size: 2.2rem; }
         }
     </style>
@@ -160,7 +116,8 @@
         <div class="logo-box"><img src="jl2.png" alt="J&L Logo"></div>
         <div class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#areas">Áreas de Práctica</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#areas">Áreas</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -171,122 +128,152 @@
         <p>Respaldo legal de alto nivel con presencia estratégica para sus proyectos en el Perú y el mundo.</p>
     </section>
 
+    <section class="nosotros-section" id="nosotros">
+        <div class="nosotros-grid">
+            <div class="nosotros-content">
+                <h2>Filosofía J&L Abogados</h2>
+                <p>Fundado hace 17 años, J&L Abogados nació con la firme convicción de que la excelencia jurídica y el éxito empresarial sostenible se construyen sobre una base humana fundamental: ser buenas personas guiadas por valores sólidos, éticos y transparentes.</p>
+                <p>Nos diferenciamos por fusionar la alta consultoría corporativa con la vanguardia tecnológica, garantizando seguridad jurídica con un alcance sin fronteras.</p>
+            </div>
+            <div class="nosotros-img">
+                <img src="estudio.jpg" alt="Firma J&L" style="width:100%; border-radius:15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <section class="diferenciadores">
+        <h2 class="section-title">¿Por qué elegirnos?</h2>
+        <div class="grid-dif">
+            <div class="item-dif">
+                <h4>🛡️ 17 Años de Trayectoria</h4>
+                <p>Casi dos décadas brindando seguridad y confianza en el sistema legal peruano.</p>
+            </div>
+            <div class="item-dif">
+                <h4>🌐 Enfoque Global</h4>
+                <p>Especialistas en conectar a ciudadanos en el extranjero con sus derechos en el Perú.</p>
+            </div>
+            <div class="item-dif">
+                <h4>🚀 Innovación Digital</h4>
+                <p>Dominamos las tecnologías de la información y el compliance moderno.</p>
+            </div>
+            <div class="item-dif">
+                <h4>🤝 Valores Éticos</h4>
+                <p>Lealtad y compromiso humano innegociable en cada caso.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="areas" class="areas-section">
-    <h2 class="section-title">Áreas de Práctica</h2>
-    <div class="grid-areas">
-        
-        <div class="card">
-            <img src="empresarial.jpg" class="card-img">
-            <div class="card-body">
-                <h3>🏢 Derecho Empresarial</h3>
-                <p>Estructuración de sociedades, gobierno corporativo, fusiones y asesoría contractual integral para empresas.</p>
+        <h2 class="section-title">Áreas de Práctica</h2>
+        <div class="grid-areas">
+            <div class="card">
+                <img src="empresarial.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>🏢 Derecho Empresarial</h3>
+                    <p>Estructuración de sociedades y gobierno corporativo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="tributario.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>💰 Derecho Tributario</h3>
+                    <p>Planeamiento fiscal estratégico y representación ante SUNAT.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="administrativo.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>🏛️ Derecho Administrativo</h3>
+                    <p>Gestión de licencias y defensa ante organismos públicos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="notarial.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>✍️ Derecho Notarial</h3>
+                    <p>Formalización de actos jurídicos y registros públicos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="familia.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>👨‍👩‍👧 Derecho de Familia</h3>
+                    <p>Sucesiones, herencias y protección de patrimonio.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="procesal.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>⚖️ Derecho Procesal</h3>
+                    <p>Estrategias en litigios civiles y comerciales.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="laboral.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>📋 Derecho Laboral</h3>
+                    <p>Asesoría preventiva y defensa ante SUNAFIL.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="inmobiliario.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>🏘️ Derecho Inmobiliario</h3>
+                    <p>Saneamiento físico-legal e inversiones urbanas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="penal.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>⚖️ Derecho Penal</h3>
+                    <p>Defensa técnica y prevención de riesgos corporativos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="digital.jpg" class="card-img">
+                <div class="card-body">
+                    <h3>💻 Transformación Digital</h3>
+                    <p>Seguridad jurídica informática, firmas digitales y privacidad de datos.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <img src="tributario.jpg" class="card-img">
-            <div class="card-body">
-                <h3>💰 Derecho Tributario</h3>
-                <p>Planeamiento fiscal estratégico, optimización de carga impositiva y representación especializada ante la SUNAT.</p>
-            </div>
-        </div>
+    <section class="banner-servicios">
+        <h2>Consultoría Corporativa, Tributaria y Servicios Globales</h2>
+        <a href="#contacto" class="btn-servicios">Ver Catálogo de Servicios</a>
+    </section>
 
-        <div class="card">
-            <img src="administrativo.jpg" class="card-img">
-            <div class="card-body">
-                <h3>🏛️ Derecho Administrativo</h3>
-                <p>Gestión de licencias, permisos estatales y defensa sólida en procedimientos sancionadores ante organismos públicos.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="notarial.jpg" class="card-img">
-            <div class="card-body">
-                <h3>✍️ Derecho Notarial</h3>
-                <p>Formalización de actos jurídicos, gestión eficiente ante registros públicos (SUNARP) y trámites no contenciosos.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="familia.jpg" class="card-img">
-            <div class="card-body">
-                <h3>👨‍👩‍👧 Derecho de Familia</h3>
-                <p>Planificación sucesoria, herencias, divorcios y protección de patrimonio familiar con absoluta reserva y enfoque boutique.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="procesal.jpg" class="card-img">
-            <div class="card-body">
-                <h3>⚖️ Derecho Procesal</h3>
-                <p>Estrategias de alto impacto en litigios civiles y comerciales, orientadas a soluciones eficientes y definitivas.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="laboral.jpg" class="card-img">
-            <div class="card-body">
-                <h3>📋 Derecho Laboral</h3>
-                <p>Asesoría preventiva, planeamiento contractual, auditorías laborales y defensa integral ante SUNAFIL.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="inmobiliario.jpg" class="card-img">
-            <div class="card-body">
-                <h3>🏘️ Derecho Inmobiliario</h3>
-                <p>Saneamiento físico-legal, gestión de proyectos inmobiliarios y asesoría en inversiones y habilitaciones urbanas.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="penal.jpg" class="card-img">
-            <div class="card-body">
-                <h3>⚖️ Derecho Penal</h3>
-                <p>Defensa técnica especializada, prevención de riesgos penales corporativos (Compliance) y patrocinio en procesos complejos.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-    
     <section class="experiencia-seccion" id="experiencia">
-    <h2 class="section-title">Experiencia</h2>
+        <h2 class="section-title">Experiencia</h2>
         <div class="contenedor-flex">
-            
             <div class="bloque-mapa">
                 <img src="jl1.png" alt="Mapa J&L" class="mapa-img">
             </div>
-
             <div class="tarjeta-experiencia">
                 <div class="tabs">
                     <button class="tab-link active" onclick="cambiarTab(event, 'nacional')">Nacional</button>
                     <button class="tab-link" onclick="cambiarTab(event, 'internacional')">Internacional</button>
                 </div>
-
                 <div id="nacional" class="tab-contenido active">
                     <ul class="lista-clientes">
                         <li>Consorcio Trasmantaro</li>
                         <li>Tabernero</li>
                         <li>Banco de la Vivienda (en liquidación)</li>
-                        <li class="otros-item">Autoridad Autónoma del Tren Eléctrico, Asociaciones y Cooperativas.</li>
+                        <li style="color:#888; font-size:0.9rem;">Autoridad Autónoma del Tren Eléctrico, Asociaciones y Cooperativas.</li>
                     </ul>
                 </div>
-
                 <div id="internacional" class="tab-contenido">
                     <ul class="lista-clientes">
                         <li>Casos en Estados Unidos</li>
                         <li>Casos en España</li>
                         <li>Asesoría Legal Transnacional</li>
-                        <li class="otros-item">Gestión estratégica de proyectos internacionales.</li>
                     </ul>
                 </div>
-
                 <div class="pie-tarjeta">
                     <p>Presencia Estratégica Nacional e Internacional</p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -310,21 +297,15 @@
     <script>
         function cambiarTab(evt, tabName) {
             var i, tabcontent, tablinks;
-            
-            // Ocultar todos los contenidos de pestañas
             tabcontent = document.getElementsByClassName("tab-contenido");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].classList.remove("active");
                 tabcontent[i].style.display = "none";
             }
-
-            // Quitar la clase active de todos los botones
             tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-
-            // Mostrar la pestaña actual y marcar el botón como activo
             var currentTab = document.getElementById(tabName);
             currentTab.style.display = "block";
             setTimeout(() => { currentTab.classList.add("active"); }, 10);
