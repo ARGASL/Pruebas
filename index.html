@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&L Abogados | Asesoría Inmobiliaria y Empresarial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --verde: #00332c; --gris-suave: #f4f4f4; --texto: #333; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; color: var(--texto); line-height: 1.6; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; padding: 2rem 10%; align-items: center; background: white; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--verde); }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--texto); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Section */
+        .hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--gris-suave); padding: 0 10%; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { max-width: 600px; font-weight: 300; font-size: 1.2rem; }
+
+        /* Seccion Mapa y Clientes */
+        .map-section { padding: 5rem 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .map-container img { width: 100%; filter: grayscale(1); opacity: 0.7; }
+        
+        .clients-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .client-tag { border-left: 3px solid var(--verde); padding-left: 15px; font-size: 0.9rem; font-weight: 600; }
+
+        /* Footer / Contacto */
+        footer { background: var(--verde); color: white; padding: 4rem 10%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        footer h3 { font-family: 'Playfair Display', serif; margin-bottom: 1.5rem; color: white; }
+        footer a { color: white; text-decoration: none; display: block; margin-bottom: 10px; opacity: 0.8; }
+        .btn-wsp { background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; position: fixed; bottom: 30px; right: 30px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">J&L ABOGADOS</div>
+        <div class="nav-links">
+            <a href="#areas">Áreas</a>
+            <a href="#casos">Casos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Excelencia Jurídica e Inmobiliaria</h1>
+        <p>Asesoría estratégica empresarial con sede en Miraflores, Lima[cite: 3, 51].</p>
+    </section>
+
+    <section id="casos" class="map-section">
+        <div class="map-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Mapa_del_Per%C3%BA_con_sus_departamentos.svg" alt="Mapa del Perú">
+        </div>
+        <div>
+            <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Presencia Nacional</h2>
+            <p>Nuestra experiencia se extiende por todo el territorio nacional, trabajando con instituciones clave[cite: 29].</p>
+            <div class="clients-grid">
+                <div class="client-tag">Consorcio Trasmantaro [cite: 36]</div>
+                <div class="client-tag">Tabernero [cite: 38]</div>
+                <div class="client-tag">Autoridad Autónoma del Tren Eléctrico [cite: 37]</div>
+                <div class="client-tag">Banco de la Vivienda [cite: 37]</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div>
+            <h3>Ubicación</h3>
+            <p>Calle Teruel N° 370 [cite: 3, 51]</p>
+            <p>Miraflores - Lima, Perú [cite: 3, 51]</p>
+        </div>
+        <div>
+            <h3>Contacto</h3>
+            <a href="mailto:jlabogados.legal@gmail.com">jlabogados.legal@gmail.com</a>
+            <p>T: +51 939 846 545</p>
+        </div>
+        <div>
+            <h3>Áreas</h3>
+            <p>Derecho Inmobiliario, Societario y Laboral[cite: 22, 24, 47, 49, 50].</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">
+        Escríbenos por WhatsApp
+    </a>
+
+</body>
+</html>
