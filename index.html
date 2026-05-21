@@ -3,85 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&L Abogados | Asesoría Integral</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>J&L Abogados | Precisión y Visión Estratégica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --verde-pro: #004d43; 
-            --verde-suave: #f0f7f6;
+            --verde-primario: #004d43; 
             --blanco: #ffffff;
-            --gris-texto: #444;
+            --gris-claro: #f8f9fa;
+            --negro-footer: #0a0a0a;
         }
 
-        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; color: var(--gris-texto); scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; color: #333; background: var(--blanco); scroll-behavior: smooth; }
 
         /* NAVEGACIÓN */
         nav {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 8%; background: var(--verde-pro); position: sticky; top: 0; z-index: 1000;
+            padding: 15px 8%; background: var(--verde-primario);
+            position: sticky; top: 0; z-index: 1000;
         }
+        .logo-box img { height: 45px; }
         .nav-links a {
-            text-decoration: none; color: white; margin-left: 25px;
-            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            text-decoration: none; color: var(--blanco); margin-left: 25px;
+            font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
         }
 
         /* HERO */
         .hero {
-            padding: 120px 8%; text-align: center;
-            background: linear-gradient(rgba(0, 77, 67, 0.9), rgba(0, 77, 67, 0.9)), 
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; color: white;
+            padding: 140px 8%;
+            background: linear-gradient(rgba(0, 77, 67, 0.85), rgba(0, 77, 67, 0.85)), 
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; color: var(--blanco);
         }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin: 0; }
-        .hero p { font-size: 1.2rem; margin-top: 20px; opacity: 0.9; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3.2rem; margin: 0; line-height: 1.1; }
+        .hero p { font-size: 1.3rem; margin-top: 20px; border-left: 4px solid var(--blanco); padding-left: 20px; opacity: 0.9; }
 
         /* ÁREAS DE PRÁCTICA */
         .seccion { padding: 80px 8%; }
-        .titulo-seccion { text-align: center; font-family: 'Playfair Display', serif; color: var(--verde-pro); font-size: 2.5rem; margin-bottom: 50px; }
+        .titulo-seccion { text-align: center; font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin-bottom: 50px; font-size: 2.2rem; }
         
-        .grid-8 {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
-        }
-        .card {
-            background: white; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s; border: 1px solid #f0f0f0;
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,77,67,0.15); }
+        .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); transition: 0.4s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-10px); border-color: var(--verde-primario); }
         .card img { width: 100%; height: 180px; object-fit: cover; }
-        .card-info { padding: 25px; }
-        .card-info h3 { color: var(--verde-pro); margin: 0 0 10px; font-size: 1.1rem; }
-        .card-info p { font-size: 0.9rem; line-height: 1.6; color: #666; }
+        .card-body { padding: 25px; }
+        .card-body h3 { font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin-bottom: 10px; font-size: 1.1rem; }
+        .card-body p { font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0; }
 
-        /* PESTAÑAS DE EXPERIENCIA */
-        .tab-container { max-width: 900px; margin: 0 auto; background: var(--verde-suave); padding: 40px; border-radius: 20px; }
-        .tab-buttons { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
-        .tab-btn {
-            padding: 12px 30px; border: none; background: white; color: var(--verde-pro);
-            border-radius: 50px; cursor: pointer; font-weight: 700; transition: 0.3s;
-        }
-        .tab-btn.active { background: var(--verde-pro); color: white; }
-        .tab-content { display: none; text-align: center; }
-        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        /* EXPERIENCIA INTERACTIVA */
+        .experiencia-box { background: var(--gris-claro); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; border-radius: 20px; padding: 50px; }
+        .clientes-list { list-style: none; padding: 0; margin: 0; }
+        .clientes-list li { padding: 15px 0; border-bottom: 1px solid #ddd; font-weight: 600; color: #444; }
+        
+        .otros-btn { background: var(--verde-primario); color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'Montserrat'; font-weight: 700; margin-top: 20px; }
+        .extra-clientes { display: none; margin-top: 10px; }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .peru-img { width: 100%; max-width: 280px; display: block; margin: 0 auto; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); }
 
-        /* MAPA Y FOOTER */
-        .footer-map { height: 400px; width: 100%; margin-top: 50px; border-radius: 15px; overflow: hidden; }
-        footer { background: #0a0a0a; color: white; padding: 60px 8%; text-align: center; }
+        /* FOOTER / MAPA */
+        footer { background: var(--negro-footer); color: var(--blanco); padding: 80px 8% 40px; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+        .mapa-iframe { height: 350px; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
 
-        .btn-wsp {
-            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white;
-            padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; z-index: 2000;
-        }
+        .btn-wsp { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; z-index: 2000; }
     </style>
 </head>
 <body>
 
     <nav>
-        <img src="jl2.png" alt="J&L" style="height: 45px;">
+        <div class="logo-box"><img src="jl2.png" alt="Logo J&L"></div>
         <div class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#areas">Especialidades</a>
+            <a href="#areas">Áreas de Práctica</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -89,97 +81,74 @@
 
     <section class="hero" id="inicio">
         <h1>Donde la precisión legal encuentra la visión estratégica.</h1>
-        <p>Asesoría legal integral de alto impacto para desafíos corporativos, civiles y especializados.</p>
+        <p>Asesoría legal boutique con cobertura nacional y enfoque en resultados tangibles.</p>
     </section>
 
     <section class="seccion" id="areas">
         <h2 class="titulo-seccion">Áreas de Práctica</h2>
-        <div class="grid-8">
-            <div class="card">
-                <img src="empresarial.jpg" alt="Empresarial">
-                <div class="card-info"><h3>Derecho Empresarial</h3><p>Estructuración de sociedades, gobierno corporativo y asesoría contractual integral.</p></div>
-            </div>
-            <div class="card">
-                <img src="inmobiliario.jpg" alt="Inmobiliario">
-                <div class="card-info"><h3>Derecho Inmobiliario</h3><p>Saneamiento físico-legal, gestión de proyectos y consultoría técnica en inversiones.</p></div>
-            </div>
-            <div class="card">
-                <img src="laboral.jpg" alt="Laboral">
-                <div class="card-info"><h3>Derecho Laboral</h3><p>Asesoría preventiva, planeamiento contractual y defensa integral ante SUNAFIL.</p></div>
-            </div>
-            <div class="card">
-                <img src="tributario.jpg" alt="Tributario">
-                <div class="card-info"><h3>Derecho Tributario</h3><p>Optimización fiscal para inversiones, planeamiento tributario y representación ante SUNAT.</p></div>
-            </div>
-            <div class="card">
-                <img src="procesal.jpg" alt="Procesal">
-                <div class="card-info"><h3>Derecho Procesal</h3><p>Representación estratégica en litigios complejos de naturaleza civil y mercantil.</p></div>
-            </div>
-            <div class="card">
-                <img src="familia.jpg" alt="Familia">
-                <div class="card-info"><h3>Derecho de Familia</h3><p>Planificación sucesoria, herencias y protección del patrimonio familiar.</p></div>
-            </div>
-            <div class="card">
-                <img src="notarial.jpg" alt="Notarial">
-                <div class="card-info"><h3>Derecho Notarial</h3><p>Formalización de actos jurídicos y gestión eficiente ante registros públicos.</p></div>
-            </div>
-            <div class="card">
-                <img src="administrativo.jpg" alt="Administrativo">
-                <div class="card-info"><h3>Derecho Administrativo</h3><p>Gestión de licencias, permisos y defensa ante procedimientos estatales.</p></div>
-            </div>
+        <div class="grid-areas">
+            <div class="card"><img src="inmobiliario.jpg"> <div class="card-body"><h3>Derecho Inmobiliario</h3><p>Saneamiento físico-legal, gestión de proyectos y asesoría registral avanzada.</p></div></div>
+            <div class="card"><img src="empresarial.jpg"> <div class="card-body"><h3>Derecho Empresarial</h3><p>Estructuración de sociedades, gobierno corporativo y asesoría contractual integral.</p></div></div>
+            <div class="card"><img src="laboral.jpg"> <div class="card-body"><h3>Derecho Laboral</h3><p>Asesoría preventiva, planeamiento contractual y defensa ante SUNAFIL.</p></div></div>
+            <div class="card"><img src="tributario.jpg"> <div class="card-body"><h3>Derecho Tributario</h3><p>Planeamiento fiscal estratégico y representación especializada ante SUNAT.</p></div></div>
+            <div class="card"><img src="procesal.jpg"> <div class="card-body"><h3>Derecho Procesal</h3><p>Estrategias procesales de alto impacto en litigios civiles y comerciales.</p></div></div>
+            <div class="card"><img src="familia.jpg"> <div class="card-body"><h3>Derecho de Familia</h3><p>Planificación sucesoria, herencias y protección del patrimonio familiar.</p></div></div>
+            <div class="card"><img src="notarial.jpg"> <div class="card-body"><h3>Derecho Notarial</h3><p>Formalización de actos jurídicos y gestión eficiente ante registros públicos.</p></div></div>
+            <div class="card"><img src="administrativo.jpg"> <div class="card-body"><h3>Derecho Administrativo</h3><p>Gestión de licencias y defensa ante procedimientos estatales sancionadores.</p></div></div>
         </div>
     </section>
 
-    <section class="seccion" id="experiencia" style="background:#fff;">
-        <h2 class="titulo-seccion">Nuestra Trayectoria</h2>
-        <div class="tab-container">
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="openTab(event, 'clientes')">Clientes</button>
-                <button class="tab-btn" onclick="openTab(event, 'alcance')">Alcance Nacional</button>
-            </div>
-
-            <div id="clientes" class="tab-content active">
-                <p>Hemos tenido el honor de colaborar con instituciones líderes:</p>
-                <ul style="list-style:none; padding:0; font-weight:600; line-height:2.5; color:var(--verde-pro)">
+    <section class="seccion" id="experiencia">
+        <h2 class="titulo-seccion">Experiencia Comprobada</h2>
+        <div class="experiencia-box">
+            <div>
+                <ul class="clientes-list">
                     <li>Consorcio Trasmantaro</li>
                     <li>Tabernero</li>
                     <li>Banco de la Vivienda</li>
-                    <li>Autoridad Autónoma del Tren Eléctrico</li>
                 </ul>
+                <div id="otros-clientes" class="extra-clientes">
+                    <ul class="clientes-list">
+                        <li>Autoridad Autónoma del Tren Eléctrico</li>
+                        <li>Asociaciones y Cooperativas</li>
+                    </ul>
+                </div>
+                <button class="otros-btn" onclick="toggleClientes()">Otros +</button>
             </div>
-
-            <div id="alcance" class="tab-content">
-                <img src="jl1.png" alt="Mapa Perú" style="max-width: 250px; margin-bottom: 20px;">
-                <p>Brindamos cobertura legal estratégica en todo el territorio peruano.</p>
+            <div>
+                <img src="jl1.png" class="peru-img" alt="Mapa Perú">
             </div>
         </div>
     </section>
 
-    <section class="seccion" id="contacto">
-        <h2 class="titulo-seccion">Ubicación Estratégica</h2>
-        <div class="footer-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.916715694372!2d-77.034502!3d-12.111818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c83d69382103%3A0xc3160a35928d3a7e!2sCalle%20Teruel%20370%2C%20Miraflores%2015074!5e0!3m2!1ses!2spe!4v1716300000000!5m2!1ses!2spe" 
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div>
+                <h3 style="font-family: 'Montserrat'">CONTACTO</h3>
+                <p>📍 Calle Teruel N° 370, Miraflores, Lima.</p>
+                <p>📞 +51 939 846 545</p>
+                <p>✉️ jlabogados.legal@gmail.com</p>
+            </div>
+            <div class="mapa-iframe">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.9419445104815!2d-77.0347!3d-12.115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8397a6e60b1%3A0x93309a96e95c4793!2sTeruel%20370%2C%20Miraflores%2015074!5e0!3m2!1ses!2spe!4v1716290000000" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
-    </section>
-
-    <footer>
-        <p>📍 Calle Teruel N° 370, Miraflores, Lima.</p>
-        <p>✉️ jlabogados.legal@gmail.com | 📞 +51 939 846 545</p>
     </footer>
 
     <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp Directo</a>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; tabcontent[i].classList.remove("active"); }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.className += " active";
+        function toggleClientes() {
+            var extra = document.getElementById("otros-clientes");
+            var btn = document.querySelector(".otros-btn");
+            if (extra.style.display === "block") {
+                extra.style.display = "none";
+                btn.innerText = "Otros +";
+            } else {
+                extra.style.display = "block";
+                btn.innerText = "Ver menos -";
+            }
         }
     </script>
 </body>
