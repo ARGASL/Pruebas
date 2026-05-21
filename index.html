@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J&L Abogados | Precisión y Visión Estratégica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
            --verde-primario: #004d43; 
@@ -49,27 +49,93 @@
         .card-body h3 { font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin: 0 0 10px; font-size: 1.1rem; display: flex; align-items: center; }
         .card-body p { font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0; }
 
-        /* EXPERIENCIA INTERACTIVA (PESTAÑAS) */
-        .impacto { padding: 100px 8%; background: #fdfdfd; border-top: 1px solid #eee; }
-        .experiencia-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-        
-        .tab-box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
-        .tab-nav { display: flex; gap: 15px; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        .tab-link { 
-            background: none; border: none; font-family: 'Montserrat'; font-weight: 700; 
-            color: #999; cursor: pointer; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s;
+        /* --- NUEVA SECCIÓN EXPERIENCIA --- */
+        .experiencia-seccion {
+            padding: 100px 8%;
+            background-color: #fdfdfd;
+            border-top: 1px solid #eee;
         }
-        .tab-link.active { color: var(--verde-primario); border-bottom: 2px solid var(--verde-primario); }
-        
-        .tab-content { display: none; animation: fadeIn 0.5s; }
-        .tab-content.active { display: block; }
+
+        .contenedor-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .bloque-mapa { flex: 1; text-align: center; }
+        .mapa-img { 
+            max-width: 320px; 
+            width: 100%; 
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1)); 
+        }
+
+        .tarjeta-experiencia {
+            flex: 1.2;
+            background: #fff;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 25px;
+            border-bottom: 2px solid #f4f4f4;
+            margin-bottom: 30px;
+        }
+
+        .tab-link {
+            background: none;
+            border: none;
+            padding: 10px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #bbb;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .tab-link.active {
+            color: var(--verde-primario);
+            border-bottom: 3px solid var(--verde-primario);
+        }
+
+        .tab-contenido { display: none; animation: fadeIn 0.5s; }
+        .tab-contenido.active { display: block; }
+
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        .lista-v { list-style: none; padding: 0; }
-        .lista-v li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-weight: 600; color: #444; font-size: 0.95rem; }
+        .lista-clientes { list-style: none; padding: 0; margin: 0; }
+        .lista-clientes li {
+            padding: 18px 0;
+            border-bottom: 1px solid #f9f9f9;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            font-weight: 500;
+        }
 
-        .peru-map-box { text-align: center; }
-        .peru-map { width: 100%; max-width: 300px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+        .otros-item { color: #888 !important; font-weight: 400 !important; font-size: 0.9rem; border: none !important; }
+
+        .pie-tarjeta {
+            margin-top: 35px;
+            border-top: 1px solid #eee;
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        .pie-tarjeta p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--verde-primario);
+            font-size: 1rem;
+            margin: 0;
+        }
 
         /* FOOTER */
         footer { background: var(--negro-footer); color: var(--blanco); padding: 80px 8% 40px; }
@@ -80,6 +146,11 @@
             position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; 
             padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; 
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 2000; transition: 0.3s;
+        }
+
+        @media (max-width: 900px) {
+            .contenedor-flex { flex-direction: column; gap: 40px; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -114,91 +185,64 @@
                 <img src="empresarial.jpg" class="card-img">
                 <div class="card-body">
                     <h3>🏢 Derecho Empresarial</h3>
-                    <p>Estructuración de sociedades, gobierno corporativo, fusiones y asesoría contractual para empresas.</p>
+                    <p>Estructuración de sociedades, gobierno corporativo y asesoría contractual.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="laboral.jpg" class="card-img">
                 <div class="card-body">
                     <h3>📋 Derecho Laboral</h3>
-                    <p>Asesoría preventiva, planeamiento contractual, auditorías laborales y defensa integral ante SUNAFIL.</p>
+                    <p>Asesoría preventiva, planeamiento contractual y defensa integral ante SUNAFIL.</p>
                 </div>
             </div>
-            <div class="card">
+             <div class="card">
                 <img src="tributario.jpg" class="card-img">
                 <div class="card-body">
                     <h3>💰 Derecho Tributario</h3>
-                    <p>Planeamiento fiscal estratégico, optimización de impuestos y representación ante la SUNAT.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="procesal.jpg" class="card-img">
-                <div class="card-body">
-                    <h3>⚖️ Derecho Procesal</h3>
-                    <p>Estrategias de alto impacto en litigios civiles y comerciales, buscando siempre la solución más eficiente.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="familia.jpg" class="card-img">
-                <div class="card-body">
-                    <h3>👨‍👩‍👧 Derecho de Familia</h3>
-                    <p>Planificación sucesoria, herencias, divorcios y protección de patrimonio familiar con absoluta reserva.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="notarial.jpg" class="card-img">
-                <div class="card-body">
-                    <h3>✍️ Derecho Notarial</h3>
-                    <p>Formalización de actos jurídicos, gestión eficiente ante registros públicos y trámites no contenciosos.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="administrativo.jpg" class="card-img">
-                <div class="card-body">
-                    <h3>🏛️ Derecho Administrativo</h3>
-                    <p>Gestión de licencias, permisos estatales y defensa ante procedimientos sancionadores de organismos públicos.</p>
+                    <p>Planeamiento fiscal estratégico y representación ante la SUNAT.</p>
                 </div>
             </div>
         </div>
     </section>
 
-<section class="experiencia-seccion">
-    <div class="contenedor-flex">
-        
-        <div class="bloque-mapa">
-            <img src="jl1.png" alt="Mapa de cobertura" class="mapa-img">
+    <section class="experiencia-seccion" id="experiencia">
+        <div class="contenedor-flex">
+            
+            <div class="bloque-mapa">
+                <img src="jl1.png" alt="Mapa J&L" class="mapa-img">
+            </div>
+
+            <div class="tarjeta-experiencia">
+                <div class="tabs">
+                    <button class="tab-link active" onclick="cambiarTab(event, 'nacional')">Nacional</button>
+                    <button class="tab-link" onclick="cambiarTab(event, 'internacional')">Internacional</button>
+                </div>
+
+                <div id="nacional" class="tab-contenido active">
+                    <ul class="lista-clientes">
+                        <li>Consorcio Trasmantaro</li>
+                        <li>Tabernero</li>
+                        <li>Banco de la Vivienda (en liquidación)</li>
+                        <li class="otros-item">Autoridad Autónoma del Tren Eléctrico, Asociaciones y Cooperativas.</li>
+                    </ul>
+                </div>
+
+                <div id="internacional" class="tab-contenido">
+                    <ul class="lista-clientes">
+                        <li>Casos en Estados Unidos</li>
+                        <li>Casos en España</li>
+                        <li>Asesoría Legal Transnacional</li>
+                        <li class="otros-item">Gestión estratégica de proyectos internacionales.</li>
+                    </ul>
+                </div>
+
+                <div class="pie-tarjeta">
+                    <p>Presencia Estratégica Nacional e Internacional</p>
+                </div>
+            </div>
+
         </div>
-
-        <div class="tarjeta-experiencia">
-            <div class="tabs">
-                <button class="tab-link active" onclick="cambiarTab(event, 'nacional')">Nacional</button>
-                <button class="tab-link" onclick="cambiarTab(event, 'internacional')">Internacional</button>
-            </div>
-
-            <div id="nacional" class="tab-contenido active">
-                <ul class="lista-clientes">
-                    <li>Consorcio Trasmantaro</li>
-                    <li>Tabernero</li>
-                    <li>Banco de la Vivienda (en liquidación)</li>
-                    <li class="otros-item">Otros</li>
-                </ul>
-            </div>
-
-            <div id="internacional" class="tab-contenido">
-                <ul class="lista-clientes">
-                    <li>Asesoría en Proyectos (EE.UU.)</li>
-                    <li>Consultoría Legal (España)</li>
-                    <li>Casos en el Extranjero</li>
-                </ul>
-            </div>
-
-            <div class="pie-tarjeta">
-                <p>Presencia Estratégica Nacional e Internacional</p>
-            </div>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <footer id="contacto">
         <div class="footer-grid">
@@ -209,7 +253,7 @@
                 <p>✉️ jlabogados.legal@gmail.com</p>
             </div>
             <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7414343167445!2d-77.034563!3d-12.112818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8397a618f3d%3A0x67347a892780e9!2sCalle%20Teruel%20370%2C%20Miraflores%2015074!5e0!3m2!1ses-419!2spe!4v1716310000000!5m2!1ses-419!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.036653281223!2d-77.0345!3d-12.1152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA2JzU0LjciUyA3N8KwMDInMDQuMiJX!5e0!3m2!1ses!2spe!4v1650000000000!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <p style="text-align: center; opacity: 0.4; font-size: 0.8rem; margin-top: 60px;">© 2026 J&L Abogados. Todos los derechos reservados.</p>
@@ -218,19 +262,26 @@
     <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp Directo</a>
 
     <script>
-        function openTab(evt, tabName) {
+        function cambiarTab(evt, tabName) {
             var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
+            
+            // Ocultar todos los contenidos de pestañas
+            tabcontent = document.getElementsByClassName("tab-contenido");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
                 tabcontent[i].classList.remove("active");
+                tabcontent[i].style.display = "none";
             }
+
+            // Quitar la clase active de todos los botones
             tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
+
+            // Mostrar la pestaña actual y marcar el botón como activo
+            var currentTab = document.getElementById(tabName);
+            currentTab.style.display = "block";
+            setTimeout(() => { currentTab.classList.add("active"); }, 10);
             evt.currentTarget.classList.add("active");
         }
     </script>
