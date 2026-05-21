@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&L Abogados | Asesores Inmobiliarios y Empresariales</title>
+    <title>J&L Abogados | Precisión y Visión Estratégica</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --verde-primario: #004d43; /* Verde de la paleta */
+            --verde-primario: #004d43; 
             --verde-claro: #f0f4f3;
             --blanco: #ffffff;
             --negro-footer: #000000;
@@ -15,7 +15,7 @@
 
         body { font-family: 'Poppins', sans-serif; margin: 0; color: #333; background: var(--blanco); scroll-behavior: smooth; overflow-x: hidden; }
 
-        /* NAVEGACIÓN CON VERDE CORPORATIVO */
+        /* NAVEGACIÓN - VERDE CORPORATIVO */
         nav {
             display: flex;
             justify-content: space-between;
@@ -25,10 +25,12 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .logo-box { display: flex; align-items: center; }
-        .logo-box img { height: 60px; } /* Archivo: jl2.png */
+        .logo-box img { 
+            height: 60px; 
+            background: transparent; /* Asegura que no haya fondo */
+            display: block;
+        }
         
         .nav-links a {
             text-decoration: none;
@@ -38,35 +40,32 @@
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            transition: 0.3s;
         }
-        .nav-links a:hover { opacity: 0.7; }
 
-        /* HERO CON IMAGEN DE DERECHO Y FRASE SELECCIONADA */
+        /* HERO - IMAGEN REPRESENTATIVA */
         .hero {
             padding: 140px 8%;
             background: linear-gradient(rgba(0, 77, 67, 0.85), rgba(0, 77, 67, 0.85)), 
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80');
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             color: var(--blanco);
-            text-align: left;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3.2rem; margin: 0; max-width: 800px; line-height: 1.2; }
-        .hero p { font-size: 1.3rem; opacity: 0.9; margin-top: 20px; font-weight: 300; max-width: 600px; border-left: 3px solid var(--blanco); padding-left: 20px; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; margin-top: 20px; font-weight: 300; border-left: 3px solid var(--blanco); padding-left: 20px; }
 
-        /* ÁREAS DE PRÁCTICA */
-        .section-title { text-align: center; font-family: 'Montserrat', sans-serif; padding: 80px 0 30px; color: var(--verde-primario); letter-spacing: 2px; }
+        /* ÁREAS DE PRÁCTICA - CORREGIDO */
+        .section-title { text-align: center; font-family: 'Montserrat', sans-serif; padding: 80px 0 30px; color: var(--verde-primario); }
         .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 8% 80px; }
         
-        details { background: var(--verde-claro); border: 1px solid #ddd; border-radius: 8px; transition: 0.3s; }
-        summary { padding: 25px; cursor: pointer; list-style: none; display: flex; align-items: center; font-weight: 700; color: var(--verde-primario); font-family: 'Montserrat'; }
+        details { background: var(--verde-claro); border: none; border-radius: 8px; transition: 0.3s; }
+        summary { padding: 25px; cursor: pointer; list-style: none; display: flex; align-items: center; font-weight: 700; color: var(--verde-primario); }
         summary span { font-size: 1.5rem; margin-right: 15px; }
-        details[open] { background: var(--blanco); border: 2px solid var(--verde-primario); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .area-content { padding: 0 25px 25px; font-size: 0.9rem; color: #555; line-height: 1.6; }
-        .area-content img { width: 100%; border-radius: 6px; margin-top: 15px; height: 180px; object-fit: cover; }
+        details[open] { background: var(--blanco); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .area-content { padding: 0 25px 25px; font-size: 0.9rem; line-height: 1.6; }
+        .area-content img { width: 100%; border-radius: 6px; margin-top: 15px; height: 180px; object-fit: cover; display: block; }
 
-        /* IMPACTO Y ANIMACIÓN DEL MAPA */
+        /* SECCIÓN IMPACTO - DISEÑO ANTERIOR RESTAURADO */
         .impacto { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 100px 8%; background: #f9f9f9; align-items: center; }
         
         @keyframes fadeInUp {
@@ -74,33 +73,43 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .map-container { animation: fadeInUp 1.5s ease-out; }
-        .peru-map { width: 100%; max-width: 400px; display: block; margin: 0 auto; } /* Archivo: jl1.png */
+        .peru-map { width: 100%; max-width: 400px; background: transparent; border: none; }
 
         .clientes-box { background: white; padding: 45px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .clientes-box h3 { color: var(--verde-primario); font-family: 'Montserrat'; margin-bottom: 25px; border-bottom: 2px solid var(--verde-claro); padding-bottom: 10px; }
+        .clientes-box h3 { color: var(--verde-primario); font-family: 'Montserrat'; border-bottom: 2px solid var(--verde-claro); padding-bottom: 10px; }
         .clientes-box ul { list-style: none; padding: 0; }
-        .clientes-box li { padding: 12px 0; border-bottom: 1px solid #eee; font-weight: 600; font-size: 0.95rem; }
+        .clientes-box li { padding: 12px 0; border-bottom: 1px solid #eee; font-weight: 600; }
 
-        /* FOOTER CON MAPA INTERACTIVO */
+        /* FOOTER NEGRO CON MAPA */
         footer { background: var(--negro-footer); color: var(--blanco); padding: 80px 8% 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .google-map { height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid #333; }
-        .footer-info h4 { font-family: 'Montserrat', sans-serif; letter-spacing: 2px; margin-bottom: 25px; color: var(--blanco); }
-        .footer-info p { opacity: 0.8; font-size: 0.9rem; margin-bottom: 15px; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .google-map { height: 300px; border-radius: 10px; overflow: hidden; }
+
+        /* BOTÓN WHATSAPP RESTAURADO */
+        .btn-wsp { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            background: #25d366; 
+            color: white; 
+            padding: 15px 25px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            z-index: 2000;
+        }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo-box">
-            <img src="jl2.png" alt="J&L Abogados">
-        </div>
+            <img src="jl2.png" alt="J&L Abogados"> </div>
         <div class="nav-links">
             <a href="index.html">Inicio</a>
-            <a href="#areas">Áreas de Práctica</a>
-            <a href="#casos">Casos de Estudio</a>
-            <a href="contacto.html">Contacto</a>
-        </div>
+            <a href="#areas">Áreas</a>
+            <a href="contacto.html">Contacto</a> </div>
     </nav>
 
     <section class="hero">
@@ -108,31 +117,30 @@
         <p>Respaldo legal de alto nivel con presencia estratégica para sus proyectos en todo el país.</p>
     </section>
 
-    <h2 id="areas" class="section-title">NUESTRAS ÁREAS DE ESPECIALIZACIÓN</h2>
-    <div class="grid-areas">
+    <div class="grid-areas" id="areas">
         <details>
             <summary><span>🏘️</span> Derecho Inmobiliario</summary>
             <div class="area-content">Saneamiento físico-legal y gestión de proyectos. <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=500"></div>
         </details>
         <details>
             <summary><span>📋</span> Derecho Laboral</summary>
-            <div class="area-content">Asesoría en contrataciones y defensa ante SUNAFIL. <img src="https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=500"></div>
+            <div class="area-content">Asesoría preventiva y defensa ante SUNAFIL. <img src="https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=500"></div>
         </details>
         <details>
             <summary><span>⚖️</span> Derecho Procesal</summary>
-            <div class="area-content">Representación estratégica en litigios civiles. <img src="https://images.unsplash.com/photo-1453941403708-341ff3b46750?auto=format&fit=crop&w=500"></div>
+            <div class="area-content">Representación estratégica en litigios complejos. <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500"></div>
         </details>
         <details>
             <summary><span>🏢</span> Derecho Societario</summary>
-            <div class="area-content">Estructuración de empresas y buen gobierno corporativo. <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500"></div>
+            <div class="area-content">Estructuración de empresas y gobierno corporativo. <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500"></div>
         </details>
         <details>
             <summary><span>👨‍👩‍👧</span> Derecho de Familia</summary>
-            <div class="area-content">Sucesiones, herencias y planificación patrimonial. <img src="https://images.unsplash.com/photo-1591115765373-520b7a2d7a59?auto=format&fit=crop&w=500"></div>
+            <div class="area-content">Planificación sucesoria y patrimonial personalizada. <img src="https://images.unsplash.com/photo-1591115765373-520b7a2d7a59?auto=format&fit=crop&w=500"></div>
         </details>
         <details>
             <summary><span>💰</span> Derecho Tributario</summary>
-            <div class="area-content">Optimización fiscal y cumplimiento tributario empresarial. <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500"></div>
+            <div class="area-content">Optimización fiscal para inversiones y empresas. <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500"></div>
         </details>
         <details>
             <summary><span>✍️</span> Derecho Notarial</summary>
@@ -140,14 +148,13 @@
         </details>
         <details>
             <summary><span>🏛️</span> Derecho Administrativo</summary>
-            <div class="area-content">Relaciones con el Estado y gestión de licencias. <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=500"></div>
+            <div class="area-content">Gestión de licencias y relaciones con entidades del Estado. <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=500"></div>
         </details>
     </div>
 
-    <section id="casos" class="impacto">
+    <section class="impacto">
         <div class="map-container">
-            <img src="jl1.png" class="peru-map" alt="Mapa del Perú">
-        </div>
+            <img src="jl1.png" class="peru-map" alt="Mapa"> </div>
         <div class="clientes-box">
             <h3>HEMOS TRABAJADO CON:</h3>
             <ul>
@@ -155,7 +162,7 @@
                 <li>Tabernero</li>
                 <li>Banco de la Vivienda en Liquidación</li>
                 <li>Autoridad Autónoma del Tren Eléctrico</li>
-                <li>Diversas Asociaciones y Cooperativas</li>
+                <li>Asociaciones y Cooperativas</li>
             </ul>
         </div>
     </section>
@@ -164,17 +171,16 @@
         <div class="footer-grid">
             <div class="footer-info">
                 <h4>VISÍTENOS</h4>
-                <p><strong>Sede Principal:</strong> Calle Teruel N° 370, Miraflores.</p>
-                <p><strong>WhatsApp:</strong> +51 945 792 645</p>
-                <p><strong>Email:</strong> jlabogados.legal@gmail.com</p>
+                <p>Calle Teruel N° 370, Miraflores.</p>
+                <p>Email: jlabogados.legal@gmail.com</p>
             </div>
             <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7423223126487!2d-77.0345091!3d-12.122941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8172906b3a3%3A0xc39218c3a105f95!2sCalle%20Teruel%20370%2C%20Miraflores%2015074!5e0!3m2!1ses-419!2spe!4v1716300000000!5m2!1ses-419!2spe" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="http://googleusercontent.com/maps.google.com/3" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-        <p style="text-align: center; opacity: 0.3; font-size: 0.7rem; margin-top: 50px;">© 2026 J&L Abogados. Excelencia y Precisión Legal.</p>
     </footer>
+
+    <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp Directo</a>
 
 </body>
 </html>
