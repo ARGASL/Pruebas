@@ -163,47 +163,39 @@
     </section>
 
 <section class="impacto" id="experiencia">
-    <div class="center-container">
-        <div class="exp-card">
-            <div class="map-background">
-                <img src="jl1.png" alt="Mapa Perú">
+    <h2 class="section-title">Experiencia y Alcance</h2>
+    <div class="experiencia-grid">
+        
+        <div class="info-card">
+            <div class="tab-header">
+                <button class="tab-link active" onclick="openTab(event, 'principales')">Principales</button>
+                <button class="tab-link" onclick="openTab(event, 'otros')">Otros</button>
             </div>
 
-            <div class="exp-content">
-                <h2 class="section-title">Experiencia y Alcance</h2>
-                
-                <div class="custom-tabs">
-                    <input type="radio" id="tab1" name="tab-group" checked>
-                    <label for="tab1">Principales</label>
+            <div id="principales" class="tab-content active">
+                <ul class="lista-minimal">
+                    <li>Consorcio Trasmantaro</li>
+                    <li>Tabernero</li>
+                    <li>Banco de la Vivienda (en liquidación)</li>
+                </ul>
+            </div>
 
-                    <input type="radio" id="tab2" name="tab-group">
-                    <label for="tab2">Otros</label>
-
-                    <div class="tab-indicator"></div>
-
-                    <div class="content-area">
-                        <div class="pane pane-1">
-                            <ul class="clean-list">
-                                <li>Consorcio Trasmantaro</li>
-                                <li>Tabernero</li>
-                                <li>Banco de la Vivienda (en liquidación)</li>
-                            </ul>
-                        </div>
-                        <div class="pane pane-2">
-                            <ul class="clean-list">
-                                <li>Autoridad Autónoma del Tren Eléctrico</li>
-                                <li>Asociaciones y Cooperativas</li>
-                                <li class="global-tag">Proyectos en EE.UU. y España</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="exp-footer">
-                    <p>Presencia Estratégica Nacional e Internacional</p>
-                </div>
+            <div id="otros" class="tab-content">
+                <ul class="lista-minimal">
+                    <li>Autoridad Autónoma del Tren Eléctrico</li>
+                    <li>Asociaciones y Cooperativas</li>
+                    <li class="destacado">Casos en Estados Unidos, España y más</li>
+                </ul>
             </div>
         </div>
+
+        <div class="map-container">
+            <img src="jl1.png" class="mapa-peru" alt="Alcance J&L">
+            <div class="alcance-tag">
+                <p>Presencia Estratégica <br> <span>Nacional e Internacional</span></p>
+            </div>
+        </div>
+        
     </div>
 </section>
 
