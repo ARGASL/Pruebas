@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&L Abogados | Precisión Legal</title>
+    <title>J&L Abogados | Asesoría Especializada</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --verde-primario: #004d43; 
-            --verde-hover: #006357;
             --blanco: #ffffff;
-            --gris-fondo: #f9f9f9;
+            --gris-claro: #f4f4f4;
             --negro-footer: #0a0a0a;
         }
 
-        body { font-family: 'Poppins', sans-serif; margin: 0; color: #333; background: var(--blanco); scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--blanco); scroll-behavior: smooth; }
 
         /* NAVEGACIÓN */
         nav {
@@ -36,37 +35,38 @@
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         /* HERO */
         .hero {
-            padding: 140px 8%;
-            background: linear-gradient(rgba(0, 77, 67, 0.85), rgba(0, 77, 67, 0.85)), 
+            padding: 120px 8%;
+            background: linear-gradient(rgba(0, 77, 67, 0.8), rgba(0, 77, 67, 0.8)), 
                         url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             color: var(--blanco);
+            text-align: center;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; }
-        .hero p { font-size: 1.2rem; margin-top: 20px; border-left: 3px solid var(--blanco); padding-left: 20px; opacity: 0.9; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
-        /* ÁREAS DE PRÁCTICA (8 ÁREAS) */
-        .areas-section { padding: 80px 8%; background: var(--blanco); }
-        .section-title { text-align: center; font-family: 'Montserrat', sans-serif; margin-bottom: 50px; color: var(--verde-primario); font-size: 2rem; }
+        /* ÁREAS DE PRÁCTICA */
+        .areas-section { padding: 80px 8%; }
+        .section-title { text-align: center; font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin-bottom: 50px; font-size: 2rem; }
         
-        .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.3s; }
-        .card:hover { transform: translateY(-8px); border-color: var(--verde-primario); }
-        .card-img { width: 100%; height: 160px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin: 0; font-size: 1rem; text-transform: uppercase; }
+        .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; text-align: center; }
+        .card:hover { transform: translateY(-5px); border-color: var(--verde-primario); }
+        .card-img { width: 100%; height: 150px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .card-body h3 { font-size: 0.9rem; color: var(--verde-primario); margin: 0; text-transform: uppercase; }
 
         /* EXPERIENCIA INTERACTIVA */
-        .experiencia-interactiva { padding: 80px 8%; background: var(--gris-fondo); }
-        .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .experiencia { padding: 80px 8%; background: var(--gris-claro); }
+        .exp-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         
-        .clientes-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .cliente-tag { 
-            background: white; 
-            padding: 20px; 
-            border-radius:
+        .grid-clientes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .cliente-card { 
+            background: white; padding: 20px; border-radius: 10px; font-weight: 600; color: var(--verde-primario);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 3px solid transparent;
+        }
+        .cliente-card:hover { background: var(--verde-primario); color: white; border-bottom: 3px solid #ccc; }
