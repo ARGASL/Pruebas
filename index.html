@@ -97,7 +97,7 @@
 
     <section class="hero" id="inicio">
         <h1>Donde la precisión legal encuentra la visión estratégica.</h1>
-        <p>Respaldo legal de alto nivel con presencia estratégica para sus proyectos en todo el país.</p>
+        <p>Respaldo legal de alto nivel con presencia estratégica para sus proyectos en el Perú y el mundo.</p>
     </section>
 
     <section id="areas" class="areas-section">
@@ -162,36 +162,40 @@
         </div>
     </section>
 
-   <section class="impacto" id="experiencia">
+ <section class="impacto" id="experiencia">
     <h2 class="section-title">Experiencia y Alcance</h2>
-    <div class="experiencia-container">
+    <div class="glass-container">
         
-        <div class="tab-box">
-            <div class="tab-nav">
-                <button class="tab-link active" onclick="openTab(event, 'principales')">Principales</button>
-                <button class="tab-link" onclick="openTab(event, 'otros')">Otros</button>
+        <div class="experience-panel">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="switchTab(event, 'principales')">Principales</button>
+                <button class="tab-btn" onclick="switchTab(event, 'otros')">Otros</button>
             </div>
 
-            <div id="principales" class="tab-content active">
-                <ul class="lista-v">
-                    <li>Consorcio Trasmantaro</li>
-                    <li>Tabernero</li>
-                    <li>Banco de la Vivienda (en liquidación)</li>
-                </ul>
-            </div>
+            <div class="tab-body">
+                <div id="principales" class="tab-pane active">
+                    <div class="client-item"><span>🏢</span> Consorcio Trasmantaro</div>
+                    <div class="client-item"><span>🍇</span> Tabernero</div>
+                    <div class="client-item"><span>🏠</span> Banco de la Vivienda (en liquidación)</div>
+                </div>
 
-            <div id="otros" class="tab-content">
-                <ul class="lista-v">
-                    <li>Autoridad Autónoma del Tren Eléctrico</li>
-                    <li>Asociaciones y Cooperativas</li>
-                    <li>Inversionistas Privados</li>
-                </ul>
+                <div id="otros" class="tab-pane">
+                    <div class="client-item"><span>🚇</span> Autoridad Autónoma del Tren Eléctrico</div>
+                    <div class="client-item"><span>👥</span> Asociaciones y Cooperativas</div>
+                    <div class="client-item highlight"><span>🌍</span> Casos en Estados Unidos, España y más</div>
+                </div>
             </div>
         </div>
 
-        <div class="peru-map-box">
-            <img src="jl1.png" class="peru-map" alt="Cobertura Nacional">
-            <p class="map-label">Presencia Estratégica Nacional</p>
+        <div class="map-visual">
+            <div class="map-wrapper">
+                <img src="jl1.png" class="map-img" alt="Mapa">
+                <div class="map-overlay-text">
+                    <span class="line-1">Presencia</span>
+                    <span class="line-2">Estratégica</span>
+                    <span class="line-3">Nacional</span>
+                </div>
+            </div>
         </div>
         
     </div>
