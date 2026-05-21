@@ -70,3 +70,82 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 3px solid transparent;
         }
         .cliente-card:hover { background: var(--verde-primario); color: white; border-bottom: 3px solid #ccc; }
+        
+        .mapa-peru { width: 100%; max-width: 300px; display: block; margin: 0 auto; }
+
+        /* FOOTER / CONTACTO */
+        footer { background: var(--negro-footer); color: var(--blanco); padding: 60px 8%; }
+        .footer-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+        .info-contacto h4 { color: var(--blanco); font-family: 'Montserrat'; margin-bottom: 20px; }
+        .map-box { height: 300px; border-radius: 10px; overflow: hidden; background: #222; }
+
+        .btn-wsp { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; z-index: 2000; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-box"><img src="jl2.png" alt="J&L"></div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#areas">Áreas de Práctica</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h1>Donde la precisión legal encuentra la visión estratégica.</h1>
+        <p>Especialistas en brindar soluciones jurídicas con un enfoque empresarial e inmobiliario.</p>
+    </section>
+
+    <section class="areas-section" id="areas">
+        <h2 class="section-title">Áreas de Práctica</h2>
+        <div class="grid-areas">
+            <div class="card"><img src="empresarial.jpg" class="card-img"><div class="card-body"><h3>Empresarial</h3></div></div>
+            <div class="card"><img src="tributario.jpg" class="card-img"><div class="card-body"><h3>Tributario</h3></div></div>
+            <div class="card"><img src="administrativo.jpg" class="card-img"><div class="card-body"><h3>Administrativo</h3></div></div>
+            <div class="card"><img src="notarial.jpg" class="card-img"><div class="card-body"><h3>Notarial</h3></div></div>
+            <div class="card"><img src="familia.jpg" class="card-img"><div class="card-body"><h3>Familia</h3></div></div>
+            <div class="card"><img src="procesal.jpg" class="card-img"><div class="card-body"><h3>Procesal</h3></div></div>
+            <div class="card"><img src="laboral.jpg" class="card-img"><div class="card-body"><h3>Laboral</h3></div></div>
+            <div class="card"><img src="inmobiliario.jpg" class="card-img"><div class="card-body"><h3>Inmobiliario</h3></div></div>
+        </div>
+    </section>
+
+    <section class="experiencia" id="experiencia">
+        <h2 class="section-title">Nuestra Experiencia</h2>
+        <div class="exp-container">
+            <div class="grid-clientes">
+                <div class="cliente-card">Consorcio Trasmantaro</div>
+                <div class="cliente-card">Tabernero</div>
+                <div class="cliente-card">Banco de la Vivienda</div>
+                <div class="cliente-card">Autoridad del Tren Eléctrico</div>
+                <div class="cliente-card">Asociaciones Civiles</div>
+                <div class="cliente-card">Cooperativas</div>
+            </div>
+            <div>
+                <img src="jl1.png" class="mapa-peru" alt="Mapa">
+                <p style="text-align:center; margin-top:15px; font-weight:600; color:var(--verde-primario)">Presencia y cobertura a nivel nacional</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="info-contacto">
+                <h4>CONTÁCTENOS</h4>
+                <p>📍 Calle Teruel N° 370, Miraflores, Lima.</p>
+                <p>📞 +51 939 846 545</p>
+                <p>✉️ jlabogados.legal@gmail.com</p>
+            </div>
+            <div class="map-box">
+                <div style="width:100%; height:100%; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:white">Mapa Interactivo</div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp Directo</a>
+
+</body>
+</html>
