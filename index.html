@@ -3,146 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&L Abogados | Asesoría Especializada</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>J&L Abogados</title>
     <style>
         :root {
-            --verde-primario: #004d43; 
+            --verde-base: #004d43; 
+            --verde-claro: #006357;
             --blanco: #ffffff;
-            --gris-claro: #f4f4f4;
-            --negro-footer: #0a0a0a;
+            --gris: #f4f4f4;
         }
 
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--blanco); scroll-behavior: smooth; }
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: var(--blanco); }
 
-        /* NAVEGACIÓN */
+        /* HEADER */
         nav {
+            background: var(--verde-base);
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 8%;
-            background: var(--verde-primario);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
-        .logo-box img { height: 45px; }
         .nav-links a {
+            color: white;
             text-decoration: none;
-            color: var(--blanco);
-            margin-left: 25px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
         }
 
         /* HERO */
         .hero {
-            padding: 120px 8%;
-            background: linear-gradient(rgba(0, 77, 67, 0.8), rgba(0, 77, 67, 0.8)), 
-                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            color: var(--blanco);
+            background: var(--verde-base);
+            color: white;
+            padding: 100px 8%;
             text-align: center;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
         /* ÁREAS DE PRÁCTICA */
-        .areas-section { padding: 80px 8%; }
-        .section-title { text-align: center; font-family: 'Montserrat', sans-serif; color: var(--verde-primario); margin-bottom: 50px; font-size: 2rem; }
+        .seccion { padding: 60px 8%; }
+        .titulo { text-align: center; color: var(--verde-base); margin-bottom: 40px; font-size: 2rem; }
         
-        .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; text-align: center; }
-        .card:hover { transform: translateY(-5px); border-color: var(--verde-primario); }
-        .card-img { width: 100%; height: 150px; object-fit: cover; }
-        .card-body { padding: 15px; }
-        .card-body h3 { font-size: 0.9rem; color: var(--verde-primario); margin: 0; text-transform: uppercase; }
+        .grid-8 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--verde-base); transform: translateY(-5px); }
+        .card img { width: 100%; height: 140px; object-fit: cover; background: #eee; }
+        .card h3 { font-size: 1rem; color: var(--verde-base); padding: 10px; margin: 0; }
 
         /* EXPERIENCIA INTERACTIVA */
-        .experiencia { padding: 80px 8%; background: var(--gris-claro); }
-        .exp-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        
-        .grid-clientes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .cliente-card { 
-            background: white; padding: 20px; border-radius: 10px; font-weight: 600; color: var(--verde-primario);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 3px solid transparent;
+        .grid-experiencia {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
         }
-        .cliente-card:hover { background: var(--verde-primario); color: white; border-bottom: 3px solid #ccc; }
-        
-        .mapa-peru { width: 100%; max-width: 300px; display: block; margin: 0 auto; }
+        .cliente-item {
+            background: var(--gris);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 5px solid var(--verde-base);
+            transition: 0.3s;
+            cursor: default;
+        }
+        .cliente-item:hover {
+            background: var(--verde-base);
+            color: white;
+        }
 
-        /* FOOTER / CONTACTO */
-        footer { background: var(--negro-footer); color: var(--blanco); padding: 60px 8%; }
-        .footer-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
-        .info-contacto h4 { color: var(--blanco); font-family: 'Montserrat'; margin-bottom: 20px; }
-        .map-box { height: 300px; border-radius: 10px; overflow: hidden; background: #222; }
+        /* FOOTER */
+        footer { background: #111; color: white; padding: 40px 8%; text-align: center; }
 
-        .btn-wsp { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; z-index: 2000; }
+        .btn-wsp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo-box"><img src="jl2.png" alt="J&L"></div>
+        <img src="jl2.png" alt="Logo" style="height: 40px;">
         <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#areas">Áreas de Práctica</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio">INICIO</a>
+            <a href="#areas">ÁREAS DE PRÁCTICA</a>
+            <a href="#experiencia">EXPERIENCIA</a>
+            <a href="#contacto">CONTACTO</a>
         </div>
     </nav>
 
     <section class="hero" id="inicio">
         <h1>Donde la precisión legal encuentra la visión estratégica.</h1>
-        <p>Especialistas en brindar soluciones jurídicas con un enfoque empresarial e inmobiliario.</p>
+        <p>Asesoría Corporativa e Inmobiliaria Integral.</p>
     </section>
 
-    <section class="areas-section" id="areas">
-        <h2 class="section-title">Áreas de Práctica</h2>
-        <div class="grid-areas">
-            <div class="card"><img src="empresarial.jpg" class="card-img"><div class="card-body"><h3>Empresarial</h3></div></div>
-            <div class="card"><img src="tributario.jpg" class="card-img"><div class="card-body"><h3>Tributario</h3></div></div>
-            <div class="card"><img src="administrativo.jpg" class="card-img"><div class="card-body"><h3>Administrativo</h3></div></div>
-            <div class="card"><img src="notarial.jpg" class="card-img"><div class="card-body"><h3>Notarial</h3></div></div>
-            <div class="card"><img src="familia.jpg" class="card-img"><div class="card-body"><h3>Familia</h3></div></div>
-            <div class="card"><img src="procesal.jpg" class="card-img"><div class="card-body"><h3>Procesal</h3></div></div>
-            <div class="card"><img src="laboral.jpg" class="card-img"><div class="card-body"><h3>Laboral</h3></div></div>
-            <div class="card"><img src="inmobiliario.jpg" class="card-img"><div class="card-body"><h3>Inmobiliario</h3></div></div>
+    <section class="seccion" id="areas">
+        <h2 class="titulo">Áreas de Práctica</h2>
+        <div class="grid-8">
+            <div class="card"><img src="empresarial.jpg"><h3>Derecho Empresarial</h3></div>
+            <div class="card"><img src="tributario.jpg"><h3>Derecho Tributario</h3></div>
+            <div class="card"><img src="administrativo.jpg"><h3>Derecho Administrativo</h3></div>
+            <div class="card"><img src="notarial.jpg"><h3>Derecho Notarial</h3></div>
+            <div class="card"><img src="familia.jpg"><h3>Derecho de Familia</h3></div>
+            <div class="card"><img src="procesal.jpg"><h3>Derecho Procesal</h3></div>
+            <div class="card"><img src="laboral.jpg"><h3>Derecho Laboral</h3></div>
+            <div class="card"><img src="inmobiliario.jpg"><h3>Derecho Inmobiliario</h3></div>
         </div>
     </section>
 
-    <section class="experiencia" id="experiencia">
-        <h2 class="section-title">Nuestra Experiencia</h2>
-        <div class="exp-container">
-            <div class="grid-clientes">
-                <div class="cliente-card">Consorcio Trasmantaro</div>
-                <div class="cliente-card">Tabernero</div>
-                <div class="cliente-card">Banco de la Vivienda</div>
-                <div class="cliente-card">Autoridad del Tren Eléctrico</div>
-                <div class="cliente-card">Asociaciones Civiles</div>
-                <div class="cliente-card">Cooperativas</div>
-            </div>
+    <section class="seccion" id="experiencia" style="background-color: #fafafa;">
+        <h2 class="titulo">Experiencia Comprobada</h2>
+        <div class="grid-experiencia">
             <div>
-                <img src="jl1.png" class="mapa-peru" alt="Mapa">
-                <p style="text-align:center; margin-top:15px; font-weight:600; color:var(--verde-primario)">Presencia y cobertura a nivel nacional</p>
+                <div class="cliente-item">Consorcio Trasmantaro</div>
+                <div class="cliente-item">Tabernero</div>
+                <div class="cliente-item">Banco de la Vivienda</div>
+                <div class="cliente-item">Autoridad del Tren Eléctrico</div>
+                <div class="cliente-item">Asociaciones y Cooperativas</div>
+            </div>
+            <div style="text-align: center;">
+                <img src="jl1.png" alt="Mapa" style="max-width: 80%; opacity: 0.8;">
             </div>
         </div>
     </section>
 
     <footer id="contacto">
-        <div class="footer-content">
-            <div class="info-contacto">
-                <h4>CONTÁCTENOS</h4>
-                <p>📍 Calle Teruel N° 370, Miraflores, Lima.</p>
-                <p>📞 +51 939 846 545</p>
-                <p>✉️ jlabogados.legal@gmail.com</p>
-            </div>
-            <div class="map-box">
-                <div style="width:100%; height:100%; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:white">Mapa Interactivo</div>
-            </div>
-        </div>
+        <p>📍 Calle Teruel N° 370, Miraflores, Lima.</p>
+        <p>✉️ jlabogados.legal@gmail.com | 📞 +51 939 846 545</p>
     </footer>
 
     <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp Directo</a>
