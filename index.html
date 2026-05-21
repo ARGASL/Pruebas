@@ -162,40 +162,41 @@
         </div>
     </section>
 
-<section class="impacto" id="experiencia">
-    <h2 class="section-title">Experiencia y Alcance</h2>
-    <div class="experiencia-grid">
+<section class="experiencia-seccion">
+    <div class="contenedor-flex">
         
-        <div class="info-card">
-            <div class="tab-header">
-                <button class="tab-link active" onclick="openTab(event, 'principales')">Principales</button>
-                <button class="tab-link" onclick="openTab(event, 'otros')">Otros</button>
+        <div class="bloque-mapa">
+            <img src="jl1.png" alt="Mapa de cobertura" class="mapa-img">
+        </div>
+
+        <div class="tarjeta-experiencia">
+            <div class="tabs">
+                <button class="tab-link active" onclick="cambiarTab(event, 'nacional')">Nacional</button>
+                <button class="tab-link" onclick="cambiarTab(event, 'internacional')">Internacional</button>
             </div>
 
-            <div id="principales" class="tab-content active">
-                <ul class="lista-minimal">
+            <div id="nacional" class="tab-contenido active">
+                <ul class="lista-clientes">
                     <li>Consorcio Trasmantaro</li>
                     <li>Tabernero</li>
                     <li>Banco de la Vivienda (en liquidación)</li>
+                    <li class="otros-item">Otros</li>
                 </ul>
             </div>
 
-            <div id="otros" class="tab-content">
-                <ul class="lista-minimal">
-                    <li>Autoridad Autónoma del Tren Eléctrico</li>
-                    <li>Asociaciones y Cooperativas</li>
-                    <li class="destacado">Casos en Estados Unidos, España y más</li>
+            <div id="internacional" class="tab-contenido">
+                <ul class="lista-clientes">
+                    <li>Asesoría en Proyectos (EE.UU.)</li>
+                    <li>Consultoría Legal (España)</li>
+                    <li>Casos en el Extranjero</li>
                 </ul>
+            </div>
+
+            <div class="pie-tarjeta">
+                <p>Presencia Estratégica Nacional e Internacional</p>
             </div>
         </div>
 
-        <div class="map-container">
-            <img src="jl1.png" class="mapa-peru" alt="Alcance J&L">
-            <div class="alcance-tag">
-                <p>Presencia Estratégica <br> <span>Nacional e Internacional</span></p>
-            </div>
-        </div>
-        
     </div>
 </section>
 
