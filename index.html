@@ -2,146 +2,117 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>J&L | Asesores Legales</title>
+    <title>J&L | Asesoría Jurídica e Inmobiliaria</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #001a16; /* Verde casi negro, muy elegante */
-            --accent: #ffffff; 
-            --text-dim: #a0a0a0;
-        }
-        body {
-            background-color: var(--bg);
-            color: var(--accent);
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        /* Header Minimalista */
-        header {
-            padding: 40px 10%;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .brand { font-weight: 700; letter-spacing: 5px; font-size: 1.2rem; }
+        :root { --bg: #001a16; --accent: #ffffff; --text-dim: #a0a0a0; }
+        body { background-color: var(--bg); color: var(--accent); font-family: 'Montserrat', sans-serif; margin: 0; }
         
-        /* Sección Principal */
-        .hero {
-            padding: 100px 10%;
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin: 0;
-            font-weight: 200;
-            letter-spacing: -2px;
-        }
-        .hero b { font-weight: 700; display: block; }
+        /* Layout General */
+        header { padding: 40px 10%; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        section { padding: 80px 10%; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        h2 { font-weight: 200; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+        /* Hero */
+        .hero h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin: 0; }
+
+        /* Áreas de Práctica (Acordeón) */
+        details { border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
+        summary { padding: 25px 0; font-size: 1.2rem; font-weight: 400; list-style: none; display: flex; justify-content: space-between; }
+        summary::after { content: '+'; font-weight: 200; }
+        details[open] summary::after { content: '-'; }
+        .details-content { padding-bottom: 20px; color: var(--text-dim); font-size: 0.95rem; max-width: 700px; }
 
         /* Mapa y Clientes */
-        .impact-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 80px 10%;
-            background: rgba(255,255,255,0.02);
-            align-items: center;
-        }
-        .map-box img {
-            width: 100%;
-            filter: invert(1) opacity(0.3); /* Hace el mapa blanco y sutil */
-        }
-        .client-list { list-style: none; padding: 0; }
-        .client-list li {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--text-dim);
-            transition: 0.3s;
-        }
-        .client-list li:hover { color: white; padding-left: 10px; }
+        .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .map-box img { width: 100%; filter: invert(1) opacity(0.4); }
+        .client-tag { display: inline-block; border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; margin: 5px; font-size: 0.8rem; letter-spacing: 1px; }
 
-        /* Contacto Directo */
-        footer {
-            padding: 80px 10%;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-        .contact-item h4 { text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); font-size: 0.8rem; }
-        .contact-item p { font-size: 1.1rem; }
-        
-        .whatsapp-fixed {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            background: white;
-            color: black;
-            padding: 20px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 2px;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
+        /* Footer */
+        footer { padding: 60px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .contact-item h4 { color: var(--text-dim); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        .wsp-btn { position: fixed; bottom: 30px; right: 30px; background: white; color: black; padding: 15px 25px; text-decoration: none; font-weight: 700; font-size: 0.8rem; z-index: 100; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="brand">J&L</div>
-        <nav style="font-size: 0.7rem; letter-spacing: 2px;">
-            MIRAFLORES / LIMA / PERÚ
-        </nav>
+        <div style="font-weight: 700; letter-spacing: 5px;">J&L</div>
+        <div style="font-size: 0.7rem; letter-spacing: 2px;">MIRAFLORES / LIMA</div>
     </header>
 
     <section class="hero">
-        <h1>ASESORÍA <b>INMOBILIARIA</b> <br> Y EMPRESARIAL.</h1>
-        <p style="color: var(--text-dim); margin-top: 30px; max-width: 500px;">
-            Soluciones legales estratégicas con presencia en todo el territorio nacional.
-        </p>
+        <h1>ASESORES <br> <b>INMOBILIARIOS</b> <br> Y EMPRESARIALES.</h1>
     </section>
 
-    <section class="impact-section">
+    <section id="areas">
+        <h2>Áreas de Práctica</h2>
+        
+        <details>
+            <summary>Derecho Inmobiliario</summary>
+            <div class="details-content">Asesoría integral en gestión de predios, saneamiento y proyectos constructivos estratégicos[cite: 24].</div>
+        </details>
+        <details>
+            <summary>Derecho Laboral</summary>
+            <div class="details-content">Gestión de relaciones laborales, cumplimiento normativo y defensa administrativa[cite: 20].</div>
+        </details>
+        <details>
+            <summary>Derecho Procesal</summary>
+            <div class="details-content">Representación estratégica en litigios civiles, comerciales y procesos complejos[cite: 21].</div>
+        </details>
+        <details>
+            <summary>Derecho Societario</summary>
+            <div class="details-content">Constitución de empresas, fusiones y manejo de estructuras corporativas[cite: 22].</div>
+        </details>
+        <details>
+            <summary>Derecho de Familia</summary>
+            <div class="details-content">Asesoría en procesos de familia, sucesiones y conciliaciones patrimoniales[cite: 23].</div>
+        </details>
+        <details>
+            <summary>Derecho Tributario y Empresarial</summary>
+            <div class="details-content">Planeamiento fiscal estratégico y defensa ante la administración tributaria[cite: 25].</div>
+        </details>
+        <details>
+            <summary>Derecho Notarial y Registral</summary>
+            <div class="details-content">Seguridad jurídica en la formalización de actos y registros públicos[cite: 27].</div>
+        </details>
+        <details>
+            <summary>Derecho Administrativo</summary>
+            <div class="details-content">Gestión de permisos y defensa ante entidades del Estado Peruano[cite: 28].</div>
+        </details>
+    </section>
+
+    <section class="impact-grid">
         <div class="map-box">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Mapa_del_Per%C3%BA_con_sus_departamentos.svg" alt="Mapa Perú">
         </div>
         <div>
-            <h3 style="letter-spacing: 3px; font-size: 0.8rem; color: var(--text-dim);">CLIENTES ESTRATÉGICOS</h3>
-            <ul class="client-list">
-                <li>Consorcio Trasmantaro</li>
-                <li>Banco de la Vivienda</li>
-                <li>Autoridad del Tren Eléctrico</li>
-                <li>Tabernero</li>
-            </ul>
+            <h2>Casos de Impacto</h2>
+            <p style="color: var(--text-dim); margin-bottom: 30px;">Nuestra trayectoria incluye asesoría a instituciones líderes en el país:</p>
+            <div class="client-tag">Consorcio Trasmantaro [cite: 36]</div>
+            <div class="client-tag">Tabernero [cite: 38]</div>
+            <div class="client-tag">Banco de la Vivienda [cite: 37]</div>
+            <div class="client-tag">Tren Eléctrico [cite: 37]</div>
         </div>
     </section>
 
     <footer>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <h4>Ubicación</h4>
-                <p>Calle Teruel N° 370, Miraflores</p>
-            </div>
-            <div class="contact-item">
-                <h4>Email</h4>
-                <p>jlabogados.legal@gmail.com</p>
-            </div>
-            <div class="contact-item">
-                <h4>Teléfono</h4>
-                <p>+51 939 846 545</p>
-            </div>
+        <div class="contact-item">
+            <h4>Dirección</h4>
+            <p>Calle Teruel N° 370<br>Miraflores, Lima </p>
+        </div>
+        <div class="contact-item">
+            <h4>Email</h4>
+            <p>jlabogados.legal@gmail.com</p>
+        </div>
+        <div class="contact-item">
+            <h4>Teléfono</h4>
+            <p>+51 939 846 545</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/51939846545" class="whatsapp-fixed" target="_blank">ENVIAR MENSAJE</a>
+    <a href="https://wa.me/51939846545" class="wsp-btn" target="_blank">WHATSAPP DIRECTO</a>
 
 </body>
 </html>
