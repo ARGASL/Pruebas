@@ -15,7 +15,7 @@
   <style>
     /* Este es el gris claro para los departamentos sin cobertura */
     path {
-        fill: #f5f5f5 !important; 
+        fill: #9fd1c9 !important; 
         stroke: #e0e0e0 !important;
         stroke-width: 0.5px;
     }
