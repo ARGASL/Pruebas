@@ -12,21 +12,21 @@
    width="542.76703"
    height="792">
    
-    <style>
-        /* Esto elimina el negro por defecto */
-        path {
-            fill: #fdfdfd !important; 
-            stroke: #ccc !important;
-            stroke-width: 0.5px;
-        }
-        /* Esto aplica tu verde a los que marcaste */
-        .clase-cobertura {
-            fill: #004d40 !important;
-            stroke: #ffffff !important;
-            stroke-width: 1px;
-        }
-    </style>
-    <!-- Tu contenido de path sigue aquí abajo -->
+  <style>
+    /* Esto pinta los departamentos base de un gris clarito elegante */
+    path {
+        fill: #f5f5f5 !important; 
+        stroke: #e0e0e0 !important;
+        stroke-width: 0.5px;
+    }
+    
+    /* Esto mantiene tu verde oscuro para las regiones con cobertura */
+    .clase-cobertura {
+        fill: #004d40 !important;
+        stroke: #ffffff !important;
+        stroke-width: 1px;
+    }
+</style>
 
   <path
      id="PE-AMA"
