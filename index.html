@@ -108,6 +108,39 @@
             .nosotros-grid, .contenedor-flex { grid-template-columns: 1fr; flex-direction: column; }
             .hero h1 { font-size: 2.2rem; }
         }
+
+.internacional-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.service-item {
+    margin-bottom: 25px; /* Más espacio entre servicios para ocupar verticalidad */
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.service-item h4 {
+    margin: 0 0 5px 0;
+    color: #004d43;
+}
+
+.service-item p {
+    font-size: 0.85rem;
+    color: #666; /* Un color gris suave para que no compita con el título */
+    margin: 0;
+}
+
+.trust-badge {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8faf9; /* Un color de fondo muy suave para diferenciarlo */
+    border-left: 4px solid #004d43;
+    font-size: 0.9rem;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -247,37 +280,54 @@
 </section>
     
     <section class="experiencia-seccion" id="experiencia">
-        <h2 class="section-title">Experiencia</h2>
-        <div class="contenedor-flex">
-            <div class="bloque-mapa">
-                <img src="jl1.png" alt="Mapa J&L" class="mapa-img">
+    <h2 class="section-title">Experiencia</h2>
+    <div class="contenedor-flex">
+        <div class="bloque-mapa">
+    <img src="jl1.png" alt="Mapa J&L" class="mapa-img">
+    <h3 style="color: #004d43; margin-top: 20px;">Cobertura Nacional</h3>
+    <p style="font-size: 0.9rem; color: #666; max-width: 250px; margin: 0 auto;">
+        Presencia estratégica en las regiones clave para el desarrollo corporativo del país.
+    </p>
+</div>
+        
+        <div class="tarjeta-experiencia">
+            <!-- Pestañas unificadas -->
+            <div class="tabs">
+                <button class="tab-link active" onclick="cambiarTab(event, 'nacional')">Nacional</button>
+                <button class="tab-link" onclick="cambiarTab(event, 'internacional')">Internacional</button>
             </div>
-            <div class="tarjeta-experiencia">
-                <div class="tabs">
-                    <button class="tab-link active" onclick="cambiarTab(event, 'nacional')">Nacional</button>
-                    <button class="tab-link" onclick="cambiarTab(event, 'internacional')">Internacional</button>
+
+            <!-- Contenido Nacional -->
+            <div id="nacional" class="tab-contenido active">
+                <ul class="lista-clientes">
+                    <li>Consorcio Trasmantaro</li>
+                    <li>Tabernero</li>
+                    <li>Banco de la Vivienda (en liquidación)</li>
+                    <li style="color:#888; font-size:0.9rem;">Autoridad Autónoma del Tren Eléctrico, Asociaciones y Cooperativas.</li>
+                </ul>
+            </div>
+
+            <!-- Contenido Internacional -->
+            <div id="internacional" class="tab-contenido">
+                <div class="service-item">
+                    <h4>Casos en Estados Unidos</h4>
+                    <p>Representación estratégica en litigios civiles y gestión de activos para la comunidad peruana.</p>
                 </div>
-                <div id="nacional" class="tab-contenido active">
-                    <ul class="lista-clientes">
-                        <li>Consorcio Trasmantaro</li>
-                        <li>Tabernero</li>
-                        <li>Banco de la Vivienda (en liquidación)</li>
-                        <li style="color:#888; font-size:0.9rem;">Autoridad Autónoma del Tren Eléctrico, Asociaciones y Cooperativas.</li>
-                    </ul>
+                <div class="service-item">
+                    <h4>Casos en España</h4>
+                    <p>Asesoría en derecho sucesorio y transacciones inmobiliarias con validez legal en el Perú.</p>
                 </div>
-                <div id="internacional" class="tab-contenido">
-                    <ul class="lista-clientes">
-                        <li>Casos en Estados Unidos</li>
-                        <li>Casos en España</li>
-                        <li>Asesoría Legal Transnacional</li>
-                    </ul>
+                <div class="service-item">
+                    <h4>Asesoría Legal Transnacional</h4>
+                    <p>Coordinación de trámites bajo el convenio de la Apostilla de La Haya para seguridad jurídica total.</p>
                 </div>
-                <div class="pie-tarjeta">
-                    <p>Presencia Estratégica Nacional e Internacional</p>
+                <div class="trust-badge">
+                    <p><strong>+150 casos de éxito</strong> | 17 años garantizando tu legado en Perú.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer id="contacto">
         <div class="footer-grid">
