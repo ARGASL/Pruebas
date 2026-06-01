@@ -11,6 +11,23 @@
    id="svg2"
    width="542.76703"
    height="792">
+   
+    <style>
+        /* Esto elimina el negro por defecto */
+        path {
+            fill: #fdfdfd !important; 
+            stroke: #ccc !important;
+            stroke-width: 0.5px;
+        }
+        /* Esto aplica tu verde a los que marcaste */
+        .clase-cobertura {
+            fill: #004d40 !important;
+            stroke: #ffffff !important;
+            stroke-width: 1px;
+        }
+    </style>
+    <!-- Tu contenido de path sigue aquí abajo -->
+
   <path
      id="PE-AMA"
      class="clase-cobertura"  title="Amazonas"
