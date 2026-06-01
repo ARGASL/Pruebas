@@ -141,9 +141,22 @@
     font-size: 0.9rem;
     text-align: center;
 }
-        .clase-cobertura {
-    fill: #004d40; /* Este es el color verde oscuro que queríamos */
-    stroke: #ffffff; /* Borde blanco para que se distingan bien */
+
+        /* Asegura que el mapa se ajuste al contenedor */
+#mapa-peru {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));
+}
+
+/* ESTO ES LO QUE PINTA LOS DEPARTAMENTOS DE VERDE */
+/* Asegúrate de que este bloque esté en tu archivo style.css */
+.clase-cobertura {
+    fill: #004d40 !important; 
+    stroke: #ffffff; 
     stroke-width: 1;
 }
     </style>
@@ -288,7 +301,9 @@
     <h2 class="section-title">Experiencia</h2>
     <div class="contenedor-flex">
         <div class="bloque-mapa">
-    <img src="jl1.png" alt="Mapa J&L" class="mapa-img">
+    <!-- Cambiamos la etiqueta img por object para que el CSS pueda entrar al SVG -->
+    <object data="peru.svg" type="image/svg+xml" id="mapa-peru" class="mapa-img"></object>
+    
     <h3 style="color: #004d43; margin-top: 20px;">Cobertura Nacional</h3>
     <p style="font-size: 0.9rem; color: #666; max-width: 250px; margin: 0 auto;">
         Presencia estratégica en las regiones clave para el desarrollo corporativo del país.
