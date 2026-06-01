@@ -142,13 +142,19 @@
     text-align: center;
 }
 
-        /* Asegura que el mapa se ajuste al contenedor */
+       .bloque-mapa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Asegura que el contenedor tenga altura */
+}
+
 #mapa-peru {
-    width: 100%;       /* Ocupa el ancho disponible */
-    max-width: 400px;  /* Ajusta este valor si lo quieres más grande o pequeño */
-    height: auto;      /* Mantiene la proporción original (vital para que no se vea deforme) */
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 280px; /* Prueba bajando un poco el tamaño */
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
 }
 
 /* ESTO ES LO QUE PINTA LOS DEPARTAMENTOS DE VERDE */
