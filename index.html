@@ -172,6 +172,18 @@
         stroke-width: 0.5px;
         transition: all 0.3s ease; /* Esto hace que el cambio sea suave */
     }
+        /* ADAPTACIÓN MÓVIL */
+    @media (max-width: 900px) {
+        .nosotros-grid, .contenedor-flex, .footer-grid { grid-template-columns: 1fr; flex-direction: column; gap: 30px; }
+        .hero { padding: 100px 5%; }
+        .hero h1 { font-size: 2rem; }
+        .hero p { font-size: 1.1rem; }
+        .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
+        .nav-links a { margin-left: 10px; font-size: 0.7rem; }
+        .grid-areas { grid-template-columns: 1fr; }
+        .tarjeta-experiencia { padding: 20px; }
+        .btn-wsp { padding: 12px 20px; bottom: 20px; right: 20px; }
+    }
     </style>
 </head>
 <body>
