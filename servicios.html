@@ -6,32 +6,30 @@
     <title>Nuestros Servicios | J&L Abogados</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --verde-primario: #004d43; --fondo: #f9f9f9; }
+        :root { --verde-primario: #004d43; --fondo: #f9f9f9; --dorado: #d4af37; }
         * { box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background: var(--fondo); margin: 0; padding-bottom: 80px; }
         
         .header-servicios { background: var(--verde-primario); color: white; padding: 60px 8%; text-align: center; }
         .header-servicios h1 { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+        /* Banner Especialidad */
+        .banner-especialidad { background: #fff; border: 2px solid var(--dorado); padding: 40px; margin: 40px 8%; border-radius: 15px; }
+        .banner-especialidad h2 { color: var(--dorado); margin-top: 0; border-bottom: 2px solid var(--dorado); display: inline-block; padding-bottom: 10px; }
+        .especialidad-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px; color: #555; }
         
-        /* Contenedor de Tarjetas */
-        .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 8%; }
-        .card-servicio { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--verde-primario); transition: transform 0.3s ease; }
-        .card-servicio:hover { transform: translateY(-10px); }
+        /* Grid Servicios */
+        .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 20px 8%; }
+        .card-servicio { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--verde-primario); }
         .card-servicio h3 { color: var(--verde-primario); margin-top: 0; }
         .card-servicio ul { padding-left: 20px; color: #555; font-size: 0.95rem; }
         .card-servicio li { margin-bottom: 10px; }
         
-        /* Botones */
-        .btn-volver { display: block; width: fit-content; margin: 40px auto; padding: 12px 30px; background: var(--verde-primario); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; transition: background 0.3s; }
-        .btn-volver:hover { background: #00332d; }
-        
-        /* Botón WhatsApp */
-        .btn-wsp { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 2000; font-size: 0.9rem; }
-        
-        /* Adaptación móvil */
+        .btn-volver { display: block; width: fit-content; margin: 40px auto; padding: 12px 30px; background: var(--verde-primario); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; }
+        .btn-wsp { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; z-index: 2000; }
+
         @media (max-width: 480px) {
-            .grid-servicios { grid-template-columns: 1fr; padding: 20px; }
-            .header-servicios { padding: 40px 5%; }
+            .grid-servicios, .banner-especialidad { padding: 20px 5%; }
         }
     </style>
 </head>
@@ -41,59 +39,52 @@
     <h1>Nuestros Servicios</h1>
 </header>
 
-<div class="grid-servicios">
-    <div class="card-servicio">
-        <h3>1. División Nacional e Internacional</h3>
-        <ul>
-            <li><strong>Notarial y Registral:</strong> Gestión ante el sistema notarial y registral.</li>
-            <li><strong>Peruanos en el Exterior:</strong> Gestión legal a distancia.</li>
-            <li><strong>Inversiones Extranjeras:</strong> Estructuración y expansión.</li>
-        </ul>
-    </div>
-    <div class="card-servicio">
-        <h3>2. Corporativo y Empresarial</h3>
-        <ul>
-            <li><strong>Derecho Corporativo:</strong> Fusiones, adquisiciones y reestructuración empresarial.</li>
-        </ul>
-    </div>
-    <div class="card-servicio">
-        <h3>3. Defensa Legal y Litigios</h3>
-        <ul>
-            <li><strong>Penal Corporativo:</strong> Patrocinio en delitos económicos.</li>
-            <li><strong>Tributario:</strong> Defensa en fiscalizaciones SUNAT.</li>
-            <li><strong>Contrataciones Estado:</strong> Licitaciones y OSCE.</li>
-        </ul>
-    </div>
-    <div class="card-servicio">
-        <h3>4. Derecho Laboral</h3>
-        <ul>
-            <li><strong>Auditoría Socio-Laboral:</strong> Estructuras y contratos.</li>
-            <li><strong>Seguridad (SST):</strong> Mitigación de riesgos laborales.</li>
-            <li><strong>Litigios:</strong> Despidos y beneficios sociales.</li>
-        </ul>
-    </div>
-    <div class="card-servicio">
-        <h3>5. Civil y Conflictos</h3>
-        <ul>
-            <li><strong>Contratos:</strong> Redacción y revisión civil.</li>
-            <li><strong>Solución de Controversias:</strong> Arbitraje y mediación.</li>
-            <li><strong>Recuperación de Activos:</strong> Embargos y remates.</li>
-        </ul>
+<!-- 1. DERECHO INMOBILIARIO (Banner Especialidad) -->
+<div class="banner-especialidad">
+    <h2>1. Derecho Inmobiliario (Especialidad del Estudio)</h2>
+    <div class="especialidad-content">
+        <p><strong>Gestión Técnica:</strong> Independizaciones, subdivisiones y habilitaciones urbanas.</p>
+        <p><strong>Saneamiento:</strong> Rectificación de áreas, linderos y titulaciones.</p>
+        <p><strong>Edificación:</strong> Declaratoria de Fábrica.</p>
+        <p><strong>Contratos:</strong> Elaboración y negociación (Compraventa, arrendamiento, superficie, usufructo, cesión, entre otros).</p>
+        <p><strong>Conflictos:</strong> Solución a problemas legales de anticipos, sucesiones y registro de propiedad.</p>
     </div>
 </div>
-    <div class="card-servicio" style="border-top: 5px solid #d4af37;"> <!-- Color dorado para resaltar especialidad -->
-    <h3>6. Derecho Inmobiliario</h3>
-    <ul>
-        <li><strong>Gestión Técnica:</strong> Independizaciones, subdivisiones y habilitaciones urbanas.</li>
-        <li><strong>Saneamiento:</strong> Rectificación de áreas, linderos y titulaciones.</li>
-        <li><strong>Edificación:</strong> Declaratoria de Fábrica.</li>
-        <li><strong>Contratos:</strong> Elaboración y negociación (Compraventa, arrendamiento, superficie, usufructo, cesión).</li>
-        <li><strong>Conflictos:</strong> Solución a problemas legales de anticipos, sucesiones y registro de propiedad.</li>
-    </ul>
+
+<!-- GRID SERVICIOS -->
+<div class="grid-servicios">
+    <div class="card-servicio">
+        <h3>2. Servicios Internacionales y a Distancia</h3>
+        <ul>
+            <li><strong>Peruanos en el Exterior:</strong> Gestionamos tus trámites legales, notariales y patrimoniales en el Perú a distancia, sin necesidad de que viajes.</li>
+            <li><strong>Inversiones Extranjeras:</strong> Te asesoramos para traer tu capital al país, estructurar tu negocio y expandirte de forma segura y legal.</li>
+        </ul>
+    </div>
+    <div class="card-servicio">
+        <h3>3. Corporativo y Empresarial</h3>
+        <ul>
+            <li><strong>Derecho Corporativo:</strong> Alianzas estratégicas, contratos comerciales, acuerdos entre socios y procesos de compra o venta de empresas.</li>
+            <li><strong>Cumplimiento (Compliance):</strong> Blindaje legal y prevención de riesgos para proteger a tu empresa de multas, fraudes o sanciones.</li>
+            <li><strong>Empresas Familiares:</strong> Creamos reglas claras (protocolos de familia) para organizar el negocio, proteger el patrimonio y evitar conflictos.</li>
+        </ul>
+    </div>
+    <div class="card-servicio">
+        <h3>4. Defensa Legal y Litigios</h3>
+        <ul>
+            <li><strong>Penal Corporativo:</strong> Defensa legal integral y prevención frente a fraudes, estafas y delitos económicos que puedan afectar a tu negocio.</li>
+        </ul>
+    </div>
+    <div class="card-servicio">
+        <h3>5. Derecho Notarial y Registral</h3>
+        <ul>
+            <li><strong>Trámites Notariales:</strong> Convertimos tus acuerdos, contratos, poderes y testamentos en documentos oficiales con total validez legal.</li>
+            <li><strong>Inscripción en SUNARP:</strong> Registramos tus empresas, propiedades o mandatos para que estén blindados ante la ley.</li>
+            <li><strong>Saneamiento e Inmuebles:</strong> Regularizamos los papeles de tus terrenos o edificaciones para que aumenten su valor comercial.</li>
+        </ul>
+    </div>
 </div>
 
 <a href="index.html" class="btn-volver">← Volver al Inicio</a>
-
 <a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp</a>
 
 </body>
