@@ -173,19 +173,13 @@
         transition: all 0.3s ease; /* Esto hace que el cambio sea suave */
     }
     
-    /* Estilo para las regiones con cobertura */
-    .clase-cobertura {
-        fill: #004d40 !important;
-        stroke: #ffffff !important;
-        stroke-width: 1px;
-    }
-
-    /* EFECTO HOVER: Lo que sucede al pasar el mouse */
-    .clase-cobertura:hover {
-        fill: #002d26 !important; /* Un verde mucho más oscuro al tocar */
-        cursor: pointer;
-        filter: brightness(1.2); /* Un pequeño brillo extra */
-    }
+ path:hover {
+    fill: #002d26 !important;
+    cursor: pointer;
+    transform: scale(1.02); /* El departamento crece un 2% al pasar el mouse */
+    transition: transform 0.2s ease;
+    filter: brightness(1.2);
+}
     </style>
 </head>
 <body>
