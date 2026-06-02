@@ -9,8 +9,7 @@
    mapsvg:geoViewBox="-81.390559 -0.036136 -68.672457 -18.388935"
    version="1.1"
    id="svg2"
-   width="542.76703"
-   height="792">
+   <svg viewBox="0 0 545 800" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
    
   <style>
     /* Este es el gris claro para los departamentos sin cobertura */
