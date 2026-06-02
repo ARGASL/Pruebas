@@ -2,21 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Nuestros Servicios | J&L Abogados</title>
-    <!-- Incluye aquí los mismos estilos o links a CSS que tienes en tu index.html -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Integrales | J&L Abogados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; padding: 50px 8%; }
-        .titulo-catalogo { color: #004d43; font-family: 'Montserrat', sans-serif; margin-bottom: 40px; }
-        /* Puedes copiar aquí las clases .card y .grid-areas de tu index para que se vea igual */
+        :root { --verde-primario: #004d43; --blanco: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; margin: 0; background: #f9f9f9; }
+        
+        header { background: var(--verde-primario); color: var(--blanco); padding: 60px 8%; text-align: center; }
+        .container { padding: 50px 8%; max-width: 1000px; margin: auto; background: var(--blanco); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        h2 { color: var(--verde-primario); border-bottom: 2px solid var(--verde-primario); padding-bottom: 10px; margin-top: 40px; }
+        h3 { color: #004d43; margin-bottom: 5px; }
+        .servicio-item { margin-bottom: 20px; }
+        
+        .btn-volver { display: inline-block; margin-top: 40px; padding: 12px 30px; background: var(--verde-primario); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; }
     </style>
 </head>
 <body>
-    <h1 class="titulo-catalogo">Catálogo de Servicios</h1>
-    <div class="grid-areas">
-        <!-- Aquí pegas toda la info detallada de tus servicios -->
-        <p>Aquí va el detalle completo de cada área de práctica...</p>
-    </div>
-    <a href="index.html">Volver al inicio</a>
+
+<header>
+    <h1>Nuestros Servicios</h1>
+</header>
+
+<div class="container">
+    <h2>1. División Nacional e Internacional</h2>
+    <div class="servicio-item"><h3>A. Derecho Notarial y Registral:</h3><p>Asesoría técnica y gestión legal integral ante el sistema notarial y registral. Saneamiento inmobiliario, propiedad, sucesiones y alta especialización ante el Tribunal Registral.</p></div>
+    <div class="servicio-item"><h3>B. Servicios para Peruanos en el Exterior:</h3><p>Protección patrimonial y gestión legal a distancia: poderes consulares, compraventa remota, planificación sucesoria y procesos no contenciosos.</p></div>
+    <div class="servicio-item"><h3>C. Inversiones Extranjeras:</h3><p>Vehículo legal para expansión, constitución de subsidiarias, contratos internacionales, acuerdos de accionistas y due diligence.</p></div>
+
+    <h2>2. Servicios Corporativos y Empresariales</h2>
+    <div class="servicio-item"><h3>Derecho Corporativo y Societario:</h3><p>Constitución, fusiones, adquisiciones, escisiones, pactos de accionistas y convenios de confidencialidad.</p></div>
+    <div class="servicio-item"><h3>Corporate Compliance:</h3><p>Modelos de prevención de riesgos: gobierno corporativo, lavado de activos y ética empresarial.</p></div>
+    <div class="servicio-item"><h3>Gobierno de Empresas Familiares:</h3><p>Protocolos familiares, planificación sucesoria generacional y creación de consejos de familia.</p></div>
+
+    <h2>3. Defensa Legal y Litigios</h2>
+    <div class="servicio-item"><h3>Derecho Penal Corporativo:</h3><p>Patrocinio en delitos económicos, fraudes, patrimonio, tributarios, ambientales y corrupción.</p></div>
+    <div class="servicio-item"><h3>Derecho Tributario:</h3><p>Planeamiento preventivo y defensa en fiscalizaciones ante SUNAT, Tribunal Fiscal y Poder Judicial.</p></div>
+    <div class="servicio-item"><h3>Derecho Administrativo y Regulatorio:</h3><p>Defensa ante ministerios, municipalidades y entes reguladores (INDECOPI, OSINERGMIN, SUNASS).</p></div>
+    <div class="servicio-item"><h3>Contrataciones con el Estado:</h3><p>Asesoría en licitaciones, concursos, recursos ante OSCE y ejecución de contratos.</p></div>
+
+    <h2>4. Derecho Laboral y Previsional</h2>
+    <div class="servicio-item"><h3>Planeamiento y Auditoría Socio-Laboral:</h3><p>Estructuras salariales, contratos y prevención ante SUNAFIL.</p></div>
+    <div class="servicio-item"><h3>Seguridad y Salud en el Trabajo (SST):</h3><p>Implementación legal del sistema SST para mitigación de riesgos.</p></div>
+    <div class="servicio-item"><h3>Litigios Laborales:</h3><p>Patrocinio en despidos, beneficios sociales y regímenes previsionales.</p></div>
+
+    <h2>5. Derecho Civil y Solución de Conflictos</h2>
+    <div class="servicio-item"><h3>Derecho de Contratos:</h3><p>Redacción y revisión de contratos civiles (arrendamientos, mutuos, garantías).</p></div>
+    <div class="servicio-item"><h3>Solución de Controversias:</h3><p>Conciliación extrajudicial, mediación y arbitraje comercial o civil.</p></div>
+    <div class="servicio-item"><h3>Recuperación de Activos:</h3><p>Estrategia integral de recuperación, embargos, secuestro de bienes y remates judiciales.</p></div>
+
+    <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+</div>
+
 </body>
 </html>
