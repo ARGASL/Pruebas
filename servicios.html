@@ -6,21 +6,33 @@
     <title>Nuestros Servicios | J&L Abogados</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --verde-primario: #004d43; --verde-claro: #f0f4f3; }
-        body { font-family: 'Poppins', sans-serif; background: #f9f9f9; margin: 0; padding-bottom: 50px; }
+        :root { --verde-primario: #004d43; --fondo: #f9f9f9; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--fondo); margin: 0; padding-bottom: 80px; }
         
         .header-servicios { background: var(--verde-primario); color: white; padding: 60px 8%; text-align: center; }
+        .header-servicios h1 { margin: 0; font-family: 'Montserrat', sans-serif; }
         
-        /* Diseño de Tarjetas (Grid) */
+        /* Contenedor de Tarjetas */
         .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 8%; }
-        .card-servicio { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--verde-primario); }
+        .card-servicio { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--verde-primario); transition: transform 0.3s ease; }
+        .card-servicio:hover { transform: translateY(-10px); }
         .card-servicio h3 { color: var(--verde-primario); margin-top: 0; }
-        .card-servicio ul { padding-left: 20px; color: #555; }
+        .card-servicio ul { padding-left: 20px; color: #555; font-size: 0.95rem; }
+        .card-servicio li { margin-bottom: 10px; }
         
-        .btn-volver { display: block; width: fit-content; margin: 20px auto; padding: 12px 30px; background: var(--verde-primario); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; }
+        /* Botones */
+        .btn-volver { display: block; width: fit-content; margin: 40px auto; padding: 12px 30px; background: var(--verde-primario); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; transition: background 0.3s; }
+        .btn-volver:hover { background: #00332d; }
         
         /* Botón WhatsApp */
-        .btn-wsp { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 2000; }
+        .btn-wsp { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 2000; font-size: 0.9rem; }
+        
+        /* Adaptación móvil */
+        @media (max-width: 480px) {
+            .grid-servicios { grid-template-columns: 1fr; padding: 20px; }
+            .header-servicios { padding: 40px 5%; }
+        }
     </style>
 </head>
 <body>
@@ -30,7 +42,6 @@
 </header>
 
 <div class="grid-servicios">
-    <!-- Tarjeta 1 -->
     <div class="card-servicio">
         <h3>1. División Nacional e Internacional</h3>
         <ul>
@@ -39,7 +50,6 @@
             <li><strong>Inversiones Extranjeras:</strong> Estructuración y expansión.</li>
         </ul>
     </div>
-    <!-- Tarjeta 2 -->
     <div class="card-servicio">
         <h3>2. Corporativo y Empresarial</h3>
         <ul>
@@ -48,7 +58,6 @@
             <li><strong>Empresas Familiares:</strong> Protocolos y consejos de familia.</li>
         </ul>
     </div>
-    <!-- Tarjeta 3 -->
     <div class="card-servicio">
         <h3>3. Defensa Legal y Litigios</h3>
         <ul>
@@ -57,7 +66,6 @@
             <li><strong>Contrataciones Estado:</strong> Licitaciones y OSCE.</li>
         </ul>
     </div>
-    <!-- Tarjeta 4 -->
     <div class="card-servicio">
         <h3>4. Derecho Laboral</h3>
         <ul>
@@ -66,7 +74,6 @@
             <li><strong>Litigios:</strong> Despidos y beneficios sociales.</li>
         </ul>
     </div>
-    <!-- Tarjeta 5 -->
     <div class="card-servicio">
         <h3>5. Civil y Conflictos</h3>
         <ul>
@@ -79,8 +86,7 @@
 
 <a href="index.html" class="btn-volver">← Volver al Inicio</a>
 
-<!-- Botón WhatsApp -->
-<a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp Directo</a>
+<a href="https://wa.me/51939846545" class="btn-wsp" target="_blank">WhatsApp</a>
 
 </body>
 </html>
