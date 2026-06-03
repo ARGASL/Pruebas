@@ -223,6 +223,30 @@
         padding: 40px 5% !important;
     }
 }
+        /* 1. Solución para el texto que se sale del recuadro */
+    .tab-contenido p, 
+    .internacional-card p,
+    .tarjeta-experiencia p {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        max-width: 100% !important;
+    }
+
+    /* 2. Asegurar que las tarjetas de Servicios tengan el mismo estilo */
+    .card-servicio {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 3. Espaciado inferior para que WhatsApp no tape el texto */
+    .tarjeta-experiencia, .stats-card {
+        padding-bottom: 80px !important; 
+    }
+}
     
     </style>
 </head>
