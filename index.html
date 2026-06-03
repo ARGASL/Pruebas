@@ -222,7 +222,6 @@
         width: 100% !important;
         padding: 40px 5% !important;
     }
-}
         /* 1. Solución para el texto que se sale del recuadro */
     .tab-contenido p, 
     .internacional-card p,
@@ -246,7 +245,18 @@
     .tarjeta-experiencia, .stats-card {
         padding-bottom: 80px !important; 
     }
-}
+    /* --- Añadido para arreglar INTERNACIONAL y las Pestañas --- */
+    .tabs {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Esto hará que baje a la siguiente línea si no cabe */
+        justify-content: center !important;
+        gap: 5px !important;
+    }
+    
+    .tab-link {
+        font-size: 0.8rem !important; /* Un poco más pequeño para que quepa */
+        padding: 5px !important;
+    }
     
     </style>
 </head>
