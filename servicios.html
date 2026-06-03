@@ -31,6 +31,26 @@
         @media (max-width: 480px) {
             .grid-servicios, .banner-especialidad { padding: 20px 5%; }
         }
+        /* Forzamos que la lista interna de Inmobiliario se apile verticalmente */
+    .card-servicio ul {
+        display: block !important;
+        columns: 1 !important; /* Asegura una sola columna */
+        padding-left: 15px !important;
+    }
+    
+    .card-servicio li {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        word-wrap: break-word !important; /* Corta palabras largas */
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Aseguramos que el texto dentro de los <li> no se salga */
+    .card-servicio li strong {
+        display: block !important; /* Pone el título en su propia línea para ganar espacio */
+        margin-bottom: 5px;
+    }
+
     </style>
 </head>
 <body>
