@@ -248,14 +248,16 @@
     /* --- Añadido para arreglar INTERNACIONAL y las Pestañas --- */
     .tabs {
         display: flex !important;
-        flex-wrap: wrap !important; /* Esto hará que baje a la siguiente línea si no cabe */
+        flex-wrap: nowrap !important; /* <--- IMPORTANTE: Esto evita que se apilen */
         justify-content: center !important;
-        gap: 5px !important;
+        gap: 10px !important;
+        width: 100% !important;
     }
     
     .tab-link {
-        font-size: 0.8rem !important; /* Un poco más pequeño para que quepa */
-        padding: 5px !important;
+        font-size: 0.7rem !important; /* Un poco más pequeño para que entren ambos */
+        white-space: nowrap !important; /* Evita que la palabra se rompa */
+        padding: 5px 2px !important;
     }
     
     </style>
