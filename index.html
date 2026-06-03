@@ -173,41 +173,58 @@
         transition: all 0.3s ease; /* Esto hace que el cambio sea suave */
     }
 @media (max-width: 900px) {
-    /* 1. CORRECCIÓN DEL MENÚ (Barra de arriba) */
-    nav { 
-        padding: 15px 5% !important; 
-        height: auto !important; 
-    }
-    .logo-box img { height: 40px !important; } /* Logo un poco más pequeño para ahorrar espacio */
-    .nav-links { 
-        margin-top: 10px !important; 
-        justify-content: center !important; 
-        gap: 8px !important; 
-    }
-    .nav-links a { 
-        margin-left: 0 !important; 
-        font-size: 0.65rem !important; /* Fuente más pequeña para que quepa todo */
-        white-space: nowrap; /* Evita que las palabras se partan en dos líneas */
+    /* 1. Forza el ancho del cuerpo y evita desbordamientos laterales */
+    body {
+        overflow-x: hidden;
+        width: 100%;
     }
 
-    /* 2. CORRECCIÓN DE LA IMAGEN Y SECCIONES (incluye la de 17 años) */
+    /* 2. Asegura que TODO el contenido sea flexible */
+    .hero, 
+    .nosotros-section, 
+    .areas-section, 
+    .banner-servicios, 
+    .experiencia-seccion, 
+    footer,
     .nosotros-grid, 
-    .contenedor-flex { 
+    .contenedor-flex, 
+    .footer-grid, 
+    .grid-areas,
+    .card,
+    .card-servicio {
         display: flex !important;
         flex-direction: column !important;
-        text-align: center !important; 
-    }
-    
-    /* Fijamos la imagen para que no se mueva de su lugar */
-    .mapa-img, .card-img, img { 
-        max-width: 100% !important; 
-        height: auto !important; 
-        margin: 0 auto !important; /* Centrado forzado */
-        display: block !important;
+        width: 100% !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
-    /* Ajuste global para que nada se salga del ancho de pantalla */
-    body { overflow-x: hidden; }
+    /* 3. Corrección de imágenes (17 años y resto) */
+    img, .mapa-img, .card-img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* 4. Barra de navegación */
+    nav {
+        flex-direction: column !important;
+        padding: 15px !important;
+    }
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    /* 5. Asegurar que los bloques de texto no se corten */
+    .tarjeta-experiencia, .nosotros-content {
+        padding: 20px !important;
+    }
 }
     
     </style>
