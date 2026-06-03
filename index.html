@@ -172,52 +172,56 @@
         stroke-width: 0.5px;
         transition: all 0.3s ease; /* Esto hace que el cambio sea suave */
     }
-  @media (max-width: 900px) {
-    /* 1. Reset general de contenedores para evitar apachurramiento */
+@media (max-width: 900px) {
+    /* 1. Forzar apilamiento vertical en todos los contenedores principales */
     .nosotros-grid, 
     .contenedor-flex, 
     .footer-grid, 
-    .hero,
-    .nosotros-section, /* Asegura que la sección de filosofía respire */
-    .experiencia-seccion { 
-        grid-template-columns: 1fr !important; 
+    .grid-areas,
+    nav { 
+        display: flex !important;
         flex-direction: column !important; 
-        gap: 20px !important; 
+        width: 100% !important;
         padding-left: 5% !important;
         padding-right: 5% !important;
-    }
-
-    /* 2. Ajustes de Navegación */
-    nav { flex-direction: column !important; padding: 20px 5% !important; }
-    .nav-links { 
-        margin-top: 15px !important; 
-        display: flex !important; 
-        flex-wrap: wrap !important; 
-        justify-content: center !important; 
-        gap: 15px !important; 
-    }
-    .nav-links a { margin-left: 0 !important; font-size: 0.75rem !important; }
-
-    /* 3. Asegurar ancho total para evitar compresión en textos e imágenes */
-    .nosotros-content, 
-    .tarjeta-experiencia,
-    .bloque-mapa,
-    .hero,
-    .card-servicio { 
-        width: 100% !important; 
-        padding: 20px !important; 
         margin: 0 !important;
     }
 
-    /* 4. Ajustes de Tipografía y elementos visuales */
+    /* 2. Asegurar que los elementos hijos dejen de intentar ser horizontales */
+    .nosotros-content, 
+    .tarjeta-experiencia, 
+    .bloque-mapa,
+    .card,
+    .nav-links { 
+        width: 100% !important; 
+        flex: none !important;
+        margin: 0 0 20px 0 !important;
+    }
+
+    /* 3. Limpieza de Navegación */
+    .nav-links { 
+        flex-direction: row !important; 
+        justify-content: center !important; 
+        gap: 10px !important;
+    }
+    .nav-links a { 
+        margin: 5px !important; 
+        font-size: 0.7rem !important; 
+    }
+
+    /* 4. Ajustes de Hero */
+    .hero { 
+        padding: 80px 5% !important; 
+        text-align: center !important;
+    }
     .hero h1 { font-size: 1.8rem !important; }
-    .hero p { font-size: 1rem !important; }
-    .grid-areas { grid-template-columns: 1fr !important; }
-    .btn-wsp { padding: 12px 20px !important; bottom: 20px !important; right: 20px !important; }
     
-    /* Extra: Asegurar que la imagen dentro de Filosofía/Nosotros no se distorsione */
-    img { max-width: 100% !important; height: auto !important; }
-}
+    /* 5. Asegurar que las imágenes no desborden */
+    img, .mapa-img { 
+        width: 100% !important; 
+        height: auto !important; 
+    }
+    
     </style>
 </head>
 <body>
