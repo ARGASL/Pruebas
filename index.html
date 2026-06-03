@@ -173,58 +173,51 @@
         transition: all 0.3s ease; /* Esto hace que el cambio sea suave */
     }
 @media (max-width: 900px) {
-    /* 1. Forza el ancho del cuerpo y evita desbordamientos laterales */
-    body {
-        overflow-x: hidden;
-        width: 100%;
-    }
+    /* 1. Reset para que todo fluya verticalmente y no se corte */
+    body { overflow-x: hidden; width: 100%; }
 
-    /* 2. Asegura que TODO el contenido sea flexible */
-    .hero, 
-    .nosotros-section, 
-    .areas-section, 
-    .banner-servicios, 
-    .experiencia-seccion, 
-    footer,
-    .nosotros-grid, 
-    .contenedor-flex, 
-    .footer-grid, 
-    .grid-areas,
-    .card,
-    .card-servicio {
-        display: flex !important;
-        flex-direction: column !important;
+    /* 2. Barra superior: corrección del menú (subtítulos) */
+    nav { 
+        flex-direction: column !important; 
+        padding: 20px 5% !important; 
+    }
+    .nav-links { 
+        margin-top: 15px !important; 
+        display: flex !important; 
+        flex-wrap: wrap !important; 
+        justify-content: center !important; 
+        gap: 15px !important; 
         width: 100% !important;
-        padding-left: 5% !important;
-        padding-right: 5% !important;
-        box-sizing: border-box !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+    }
+    .nav-links a { 
+        margin: 0 !important; 
+        font-size: 0.8rem !important; 
+        white-space: normal !important; /* Permite salto de línea en lugar de apachurrarse */
     }
 
-    /* 3. Corrección de imágenes (17 años y resto) */
-    img, .mapa-img, .card-img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
+    /* 3. Mapa y Footer: arreglar el corte */
+    .google-map { 
+        height: 250px !important; /* Altura fija para que no se corte */
+        width: 100% !important; 
+    }
+    footer, .footer-grid { 
+        display: block !important; /* Cambiamos a block para evitar conflictos de flex */
+        padding: 40px 5% !important; 
     }
 
-    /* 4. Barra de navegación */
-    nav {
-        flex-direction: column !important;
-        padding: 15px !important;
+    /* 4. Sección Experiencia: alinear a la izquierda */
+    .contenedor-flex { 
+        display: block !important; 
+        text-align: left !important; /* Alineación ordenada a la izquierda */
     }
-    .nav-links {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 10px !important;
+    .tarjeta-experiencia { 
+        width: 100% !important; 
+        padding: 20px !important; 
+        margin-bottom: 30px !important;
     }
 
-    /* 5. Asegurar que los bloques de texto no se corten */
-    .tarjeta-experiencia, .nosotros-content {
-        padding: 20px !important;
-    }
+    /* 5. Asegurar que las imágenes no desborden */
+    img { max-width: 100% !important; height: auto !important; }
 }
     
     </style>
