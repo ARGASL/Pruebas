@@ -260,13 +260,26 @@
         padding: 5px 2px !important;
     }
 
+/* Contenedor de logos */
+.grupo-logos {
+    display: flex;
+    justify-content: flex-start; /* Esto los empuja a la izquierda */
+    align-items: center;
+    gap: 20px; /* Espacio entre los dos logos */
+}
+
+/* Tamaño controlado y alineación */
 .logo-pequeno {
-    width: 80px !important; 
+    width: 100px !important; /* Ajusta este valor si los quieres más chicos */
     height: auto !important;
-    display: inline-block !important;
-    vertical-align: middle !important;
-    border: none !important;
-    margin: 0 10px 0 0 !important;
+    display: block;
+    filter: grayscale(0.2); /* Un toque elegante */
+    transition: 0.3s;
+}
+
+.logo-pequeno:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
 }
     
     </style>
@@ -463,14 +476,16 @@
                 <p>📞 +51 939 846 545</p>
                 <p>✉️ jlabogados.legal@gmail.com</p>
             </div>
-<div class="grupo-logos">
-    <a href="https://gastulo.pe" target="_blank">
-        <img src="gastulo.png" alt="Gástulo" class="logo-pequeno" width="80">
-    </a>
-    <a href="https://fedas.pe" target="_blank">
-        <img src="fedas.png" alt="Fedas" class="logo-pequeno" width="80">
-    </a>
-</div>
+<div class="footer-empresas">
+        <p style="font-size: 0.8rem; color: #aaa; margin-top: 15px; margin-bottom: 10px;">Conoce nuestras otras empresas:</p>
+        <div class="grupo-logos">
+            <a href="https://gastulo.pe" target="_blank">
+                <img src="gastulo.png" alt="Gástulo" class="logo-pequeno">
+            </a>
+            <a href="https://fedas.pe" target="_blank">
+                <img src="fedas.png" alt="Fedas" class="logo-pequeno">
+                </a>
+        </div>
             <div class="google-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.036653281223!2d-77.0345!3d-12.1152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA2JzU0LjciUyA3N8KwMDInMDQuMiJX!5e0!3m2!1ses!2spe!4v1650000000000!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
