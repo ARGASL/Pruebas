@@ -260,41 +260,38 @@
         padding: 5px 2px !important;
     }
 
-/* EMPRESAAAAAAAAAAAAAAAS Alineación de la columna de contacto */
-.columna-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Título de la sección de empresas */
-.titulo-empresas {
-    font-size: 0.85rem;
-    color: #888;
-    margin: 20px 0 10px 0; /* Espacio arriba y abajo */
-    font-weight: 500;
-}
-
-/* Contenedor de logos */
+/* EMPRESAAAAAAAAAAAAAAAAAAAAAAAS Contenedor de logos */
 .grupo-logos {
     display: flex;
     flex-direction: row;
-    align-items: center; /* ESTO es lo que alinea las imágenes a la misma altura */
-    gap: 30px;           /* ESTO aumenta la separación entre los logos */
+    align-items: center; 
+    gap: 30px;
     margin-top: 10px;
 }
 
-/* Tamaño de los logos */
+/* El truco: Usar el contenedor del enlace (<a>) como caja de medida */
+.grupo-logos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;  /* Ancho fijo para el área del logo */
+    height: 60px;  /* Altura fija para el área del logo */
+    background: transparent;
+}
+
+/* El logo se adapta a la caja, sin importar su forma original */
 .logo-pequeno {
-    width: 140px !important;  /* Ajusta este número: más grande o pequeño según prefieras */
-    height: auto !important;  /* Mantiene la proporción sin deformarse */
-    object-fit: contain;      /* Importante para que no se corten */
-    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
     transition: 0.3s;
+    filter: brightness(0.8);
 }
 
 .logo-pequeno:hover {
-    opacity: 1; /* Se vuelve sólido al pasar el mouse */
+    filter: brightness(1);
     transform: scale(1.05);
 }
     
