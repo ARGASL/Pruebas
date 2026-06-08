@@ -262,25 +262,27 @@
 
     Como tus logos se llaman gastulo.png y fedas.png, y probablemente tengan fondos distintos o tamaños diferentes, usa este CSS optimizado para que se vean alineados, del mismo tamaño y con un toque profesional sobre el fondo negro de tu footer:
 
-/* EMPRESAAAAAAAAAAAAAAS Esto fuerza a que los logos tengan un tamaño pequeño y controlado */
-.grupo-logos img {
-    width: 150px !important;  /* Ajusta este número: prueba con 100px si aún es muy grande */
-    height: auto !important;  /* Mantiene la proporción para que no se deformen */
-    display: block;
-    margin: 0 auto;
-}
-
-/* Para que queden alineados a la izquierda, debajo del email */
+/* --- EMPRESAAAAAAAAAAAAAAAAAAAAAAAAS Estilos para la sección de otras empresas --- */
 .footer-empresas {
-    text-align: left; /* Alinea el texto y los logos a la izquierda como el email */
-    margin-top: 20px;
+    margin-top: 15px;  /* Espacio sutil debajo del correo */
+    text-align: left; /* Alinea el título a la izquierda */
 }
 
+/* Forzamos el tamaño de los logos: MUY PEQUEÑOS */
+.grupo-logos img {
+    width: 60px !important;  /* ¡Ajusta este número! Prueba 50px si 60px es mucho */
+    height: auto !important;  /* Mantiene la proporción */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Contenedor para que queden alineados a la izquierda y con espacio */
 .grupo-logos {
     display: flex;
-    justify-content: flex-start; /* Alinea los logos a la izquierda */
-    gap: 15px; /* Espacio entre los dos logos */
-    margin-top: 10px;
+    justify-content: flex-start; /* Logos a la izquierda, no centrados */
+    align-items: center;
+    gap: 10px; /* Espacio mínimo entre los dos logos */
+    margin-top: 5px;
 }
     
     </style>
@@ -478,8 +480,7 @@
                 <p>✉️ jlabogados.legal@gmail.com</p>
             </div>
 <div class="footer-empresas">
-        <p style="font-size: 0.8rem; color: #888;">Conoce nuestras otras empresas:</p>
-        <div class="grupo-logos">
+<p style="font-size: 0.8rem; color: #777;">Conoce nuestras otras empresas:</p>        <div class="grupo-logos">
             <a href="https://gastulo.pe" target="_blank">
                 <img src="gastulo.png" alt="Gástulo">
             </a>
