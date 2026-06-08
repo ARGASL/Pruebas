@@ -263,26 +263,12 @@
     Como tus logos se llaman gastulo.png y fedas.png, y probablemente tengan fondos distintos o tamaños diferentes, usa este CSS optimizado para que se vean alineados, del mismo tamaño y con un toque profesional sobre el fondo negro de tu footer:
 
 /* --- EMPRESAAAAAAAAAAAAAAAAAAAAAAAAS Estilos para la sección de otras empresas --- */
-.footer-empresas {
-    margin-top: 15px;  /* Espacio sutil debajo del correo */
-    text-align: left; /* Alinea el título a la izquierda */
-}
-
-/* Forzamos el tamaño de los logos: MUY PEQUEÑOS */
-.grupo-logos img {
-    width: 60px !important;  /* ¡Ajusta este número! Prueba 50px si 60px es mucho */
-    height: auto !important;  /* Mantiene la proporción */
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* Contenedor para que queden alineados a la izquierda y con espacio */
-.grupo-logos {
-    display: flex;
-    justify-content: flex-start; /* Logos a la izquierda, no centrados */
-    align-items: center;
-    gap: 10px; /* Espacio mínimo entre los dos logos */
-    margin-top: 5px;
+.footer-empresas .grupo-logos a img {
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    height: auto !important;
+    display: block !important;
 }
     
     </style>
