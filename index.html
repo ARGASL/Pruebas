@@ -260,25 +260,39 @@
         padding: 5px 2px !important;
     }
 
+/* EMPRESAAAAAAAAAAAAAAAS Alineación de la columna de contacto */
+.columna-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Título de la sección de empresas */
+.titulo-empresas {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 20px 0 10px 0; /* Espacio arriba y abajo */
+    font-weight: 500;
+}
+
 /* Contenedor de logos */
 .grupo-logos {
     display: flex;
-    justify-content: flex-start; /* Esto los empuja a la izquierda */
+    flex-direction: row;
+    gap: 20px; /* Separación bonita entre los logos */
     align-items: center;
-    gap: 20px; /* Espacio entre los dos logos */
 }
 
-/* Tamaño controlado y alineación */
+/* Tamaño de los logos */
 .logo-pequeno {
-    width: 100px !important; /* Ajusta este valor si los quieres más chicos */
+    width: 120px !important; /* Ajusta aquí el tamaño si deseas */
     height: auto !important;
-    display: block;
-    filter: grayscale(0.2); /* Un toque elegante */
+    opacity: 0.7; /* Ligeramente transparente para elegancia */
     transition: 0.3s;
 }
 
 .logo-pequeno:hover {
-    filter: grayscale(0);
+    opacity: 1; /* Se vuelve sólido al pasar el mouse */
     transform: scale(1.05);
 }
     
