@@ -263,12 +263,12 @@
     Como tus logos se llaman gastulo.png y fedas.png, y probablemente tengan fondos distintos o tamaños diferentes, usa este CSS optimizado para que se vean alineados, del mismo tamaño y con un toque profesional sobre el fondo negro de tu footer:
 
 /* --- EMPRESAAAAAAAAAAAAAAAAAAAAAAAAS Estilos para la sección de otras empresas --- */
-.footer-empresas .grupo-logos a img {
+.logo-pequeno {
     width: 60px !important;
-    min-width: 60px !important;
-    max-width: 60px !important;
-    height: auto !important;
-    display: block !important;
+    height: 60px !important;
+    object-fit: contain !important; /* Esto evita que se deforme */
+    display: inline-block !important;
+    margin: 0 !important;
 }
     
     </style>
