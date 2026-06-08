@@ -262,44 +262,25 @@
 
     Como tus logos se llaman gastulo.png y fedas.png, y probablemente tengan fondos distintos o tamaños diferentes, usa este CSS optimizado para que se vean alineados, del mismo tamaño y con un toque profesional sobre el fondo negro de tu footer:
 
-CSS
-/* --- Estilos para la sección de empresas --- */
-.footer-empresas {
-    margin-top: 40px; /* Separación del resto del contenido */
-    padding-top: 20px;
-    border-top: 1px solid #333; /* Línea elegante */
-    text-align: center;
+/* EMPRESAAAAAAAAAAAAAAS Esto fuerza a que los logos tengan un tamaño pequeño y controlado */
+.grupo-logos img {
+    width: 150px !important;  /* Ajusta este número: prueba con 100px si aún es muy grande */
+    height: auto !important;  /* Mantiene la proporción para que no se deformen */
+    display: block;
+    margin: 0 auto;
 }
 
-.footer-empresas p {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    font-family: sans-serif;
+/* Para que queden alineados a la izquierda, debajo del email */
+.footer-empresas {
+    text-align: left; /* Alinea el texto y los logos a la izquierda como el email */
+    margin-top: 20px;
 }
 
 .grupo-logos {
     display: flex;
-    justify-content: center;
-    align-items: center; /* Alinea los logos verticalmente */
-    gap: 30px; /* Espacio entre los dos logos */
-    flex-wrap: wrap;
-}
-
-.grupo-logos a {
-    display: block;
-}
-
-.grupo-logos img {
-    height: 50px; /* Altura fija para que ambos se vean del mismo tamaño */
-    width: auto;  /* Mantiene la proporción original */
-    filter: brightness(0.8) grayscale(0.2); /* Los hace ver elegantes sobre fondo negro */
-    transition: all 0.3s ease;
-}
-
-.grupo-logos img:hover {
-    filter: brightness(1) grayscale(0); /* Se iluminan al pasar el mouse */
-    transform: scale(1.05); /* Un pequeño zoom suave */
+    justify-content: flex-start; /* Alinea los logos a la izquierda */
+    gap: 15px; /* Espacio entre los dos logos */
+    margin-top: 10px;
 }
     
     </style>
@@ -496,14 +477,14 @@ CSS
                 <p>📞 +51 939 846 545</p>
                 <p>✉️ jlabogados.legal@gmail.com</p>
             </div>
-            <div class="footer-empresas">
-    <p>Conoce nuestras otras empresas:</p>
-    <div class="grupo-logos">
-        <a href="https://gastulo.pe" target="_blank">
-            <img src="gastulo.png" alt="Gástulo">
-        </a>
-        <a href="https://fedas.pe" target="_blank">
-            <img src="fedas.png" alt="Fedas">
+<div class="footer-empresas">
+        <p style="font-size: 0.8rem; color: #888;">Conoce nuestras otras empresas:</p>
+        <div class="grupo-logos">
+            <a href="https://gastulo.pe" target="_blank">
+                <img src="gastulo.png" alt="Gástulo">
+            </a>
+            <a href="https://fedas.pe" target="_blank">
+                <img src="fedas.png" alt="Fedas">
         </a>
     </div>
 </div>
